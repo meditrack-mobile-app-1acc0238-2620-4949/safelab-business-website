@@ -1139,3 +1139,16 @@ textarea { resize: vertical; }
 
 .hero-title__line--mixed{display:inline-flex !important; align-items:baseline; gap:0.16em; white-space:nowrap;}
 .hero-title__child{margin-top:-0.02em;}
+
+/* Benefits images */
+.benefit-card {
+  overflow: hidden;
+}
+
+.benefit-card__image {
+  width: 100%;
+  height: 190px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  object-position: center;
+}
