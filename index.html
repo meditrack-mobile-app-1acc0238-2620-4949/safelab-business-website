@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafeLab | Smart Cold Chain Monitoring for Clinical Laboratories</title>
+  <meta name="description" content="SafeLab provides automated environmental monitoring, real-time alerts and audit-ready reporting for clinical laboratories, hospitals and pharmacy networks." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles/styles.css" />
+</head>
+<body>
+  <header class="navbar" id="topbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand" aria-label="SafeLab home">
+        <img src="assets/images/logos/safelab-shield.png" alt="SafeLab shield logo" class="brand-logo" />
+        <span class="brand-name">SafeLab</span>
+      </a>
+
+      <!-- TOPBAR ORDER updated according to correction sketch -->
+      <nav class="nav-menu" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#services">Services</a>
+        <a href="#plans">Plans</a>
+        <a href="#product">About Product</a>
+        <a href="#team">About Team</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="ghost-chip" type="button" aria-label="Language switch visual button">EN / ES</button>
+        <button class="icon-chip" type="button" aria-label="Theme switch visual button">☼</button>
+        <a href="https://safelab-frontend.vercel.app/" class="ghost-btn">Login</a>
+        <a href="https://safelab-frontend.vercel.app/" class="primary-btn">Sign Up</a>
+      </div>
+
+      <button class="mobile-toggle" type="button" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-panel">
+      <a href="#home">Home</a>
+      <a href="#benefits">Benefits</a>
+      <a href="#services">Services</a>
+      <a href="#plans">Plans</a>
+      <a href="#product">About Product</a>
+      <a href="#team">About Team</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <div class="mobile-panel-actions">
+        <button class="ghost-chip" type="button">EN / ES</button>
+        <button class="icon-chip" type="button" aria-label="Theme switch visual button">☼</button>
+        <a href="https://safelab-frontend.vercel.app/" class="ghost-btn">Login</a>
+        <a href="https://safelab-frontend.vercel.app/" class="primary-btn">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal-up">
+          <span class="eyebrow">SMART COLD CHAIN MONITORING</span>
+
+          <!-- HERO TITLE updated with multi-color gradient treatment inspired by the reference image -->
+          <h1 class="hero-title">
+            <span class="hero-title__dark">Protect</span>
+            <span class="hero-title__dark">every</span>
+            <span class="hero-title__cool">sample,</span>
+            <span class="hero-title__line hero-title__line--mixed">
+              <span class="hero-title__warm">reactive</span>
+              <span class="hero-title__dark hero-title__for">and</span>
+            </span>
+            <span class="hero-title__dark hero-title__child">vaccine</span>
+          </h1>
+
+          <p>
+            SafeLab helps laboratories, hospitals and pharmacy networks protect biological inventory through continuous environmental monitoring,
+            predictive alerts and audit-ready records that reduce risk, waste and manual control tasks.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="primary-btn large">Request a demo</a>
+            <a href="#services" class="secondary-btn large">Explore platform</a>
+          </div>
+          <div class="stats-grid">
+            <article class="stat-card">
+              <strong>24/7</strong>
+              <span>Continuous monitoring</span>
+            </article>
+            <article class="stat-card">
+              <strong>95%</strong>
+              <span>Waste reduction goal</span>
+            </article>
+            <article class="stat-card">
+              <strong>2h</strong>
+              <span>Target onboarding time</span>
+            </article>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal-up delay-1" aria-label="SafeLab dashboard preview">
+          <div class="device-frame">
+            <!-- CARD 1 | moved higher and more to the left + floating animation -->
+            <div class="device-card top-card float-card float-card--a">
+              <span class="tag">LIVE MONITORING</span>
+              <h3>Cold chain status</h3>
+              <p>Environmental data, equipment state and threshold deviations in one central view.</p>
+            </div>
+
+            <!-- VISUAL CORE | real transparent shield logo inserted here -->
+            <div class="orbit-panel logo-drift">
+              <img src="assets/images/logos/safelab-shield.png" alt="SafeLab shield logo" class="hero-logo-img">
+            </div>
+
+            <!-- CARD 2 | also animated softly -->
+            <div class="mini-card left-mini float-card float-card--b">
+              <span>Protected inventory</span>
+              <strong>Reactives · Vaccines · Samples</strong>
+            </div>
+
+            <!-- CARD 3 | moved closer to lower-right corner + floating animation -->
+            <div class="mini-card right-mini float-card float-card--c">
+              <span class="tag warm">ZERO WASTE</span>
+              <h4>Automated alerts</h4>
+              <p>Get notified before thermal excursions cause irreversible degradation or compliance issues.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS moved before Services -->
+    <section class="section benefits">
+      <div class="container section-head reveal-up" id="benefits">
+        <div>
+          <span class="section-kicker">Benefits</span>
+          <h2>Visible value for laboratories and healthcare operations.</h2>
+        </div>
+        <p>
+          The platform is built around traceability, risk prevention and operational efficiency, helping healthcare teams replace manual control with continuous monitoring and reliable data.
+        </p>
+      </div>
+
+      <div class="container benefits-grid benefits-grid--compact">
+        <article class="benefit-card reveal-up">
+          <div class="benefit-card__icon">🧪</div>
+          <h3>Clinical safety protection</h3>
+          <p>Protect critical materials by detecting temperature risks before they compromise diagnostic reliability or patient safety.</p>
+        </article>
+        <article class="benefit-card reveal-up delay-1">
+          <div class="benefit-card__icon">🖥️</div>
+          <h3>24/7 remote visibility</h3>
+          <p>Monitor storage conditions, equipment state and thermal deviations continuously from a centralized dashboard.</p>
+        </article>
+        <article class="benefit-card reveal-up delay-2">
+          <div class="benefit-card__icon">🚨</div>
+          <h3>Early incident response</h3>
+          <p>Configurable alerts help teams react before a cold chain failure turns into lost stock or regulatory exposure.</p>
+        </article>
+        <article class="benefit-card reveal-up">
+          <div class="benefit-card__icon">📝</div>
+          <h3>Less manual documentation</h3>
+          <p>Reduce hours spent on paper logs and repetitive supervision so specialists can focus on higher-value clinical work.</p>
+        </article>
+        <article class="benefit-card reveal-up delay-1">
+          <div class="benefit-card__icon">📈</div>
+          <h3>Audit-ready traceability</h3>
+          <p>Maintain historical, structured and exportable records that support inspections, audits and quality controls.</p>
+        </article>
+        <article class="benefit-card reveal-up delay-2">
+          <div class="benefit-card__icon">☁️</div>
+          <h3>Scalable SaaS adoption</h3>
+          <p>Deploy a modern web platform that fits resource-constrained institutions without complex local infrastructure.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SERVICES + PLANS share the same highlighted background band -->
+    <section class="section alt-section section-band">
+      <div class="container" id="services">
+        <div class="section-heading reveal-up center-heading">
+          <span class="eyebrow">SERVICES</span>
+          <h2>Solutions designed for clinical cold chain operations.</h2>
+          <p>SafeLab supports laboratories, hospitals and pharmacy networks with modular monitoring, alerting and reporting capabilities.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="feature-card reveal-up">
+            <span class="card-badge">SEGMENT 01</span>
+            <h3>Clinical laboratories</h3>
+            <ul>
+              <li>Continuous environmental monitoring</li>
+              <li>Threshold-based alerts</li>
+              <li>Digital traceability records</li>
+              <li>Less manual temperature logging</li>
+            </ul>
+          </article>
+          <article class="feature-card reveal-up delay-1">
+            <span class="card-badge">SEGMENT 02</span>
+            <h3>Hospitals and clinical pharmacies</h3>
+            <ul>
+              <li>Multi-equipment centralized dashboard</li>
+              <li>Multi-location visibility</li>
+              <li>Audit-ready traceability support</li>
+              <li>Faster response to failures</li>
+            </ul>
+          </article>
+          <article class="feature-card reveal-up delay-2">
+            <span class="card-badge">CORE PLATFORM</span>
+            <h3>SafeLab monitoring platform</h3>
+            <ul>
+              <li>Integrated sensor-based data flow</li>
+              <li>Audit-ready historical records</li>
+              <li>Guided onboarding experience</li>
+              <li>Scalable SaaS architecture</li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- New Plans block requested in the correction PDF -->
+        <div class="plans-block" id="plans">
+          <div class="section-heading reveal-up center-heading plans-heading">
+            <span class="eyebrow">PLANS</span>
+            <h2>Flexible plans for each healthcare organization.</h2>
+          </div>
+
+          <div class="plans-grid">
+            <article class="plan-card reveal-up plan-card--starter">
+              <span class="plan-tag">Starter</span>
+              <h3>Starter Lab</h3>
+              <div class="plan-price"><span>$</span>29<span class="plan-cycle">/month</span></div>
+              <p>For small laboratories that need reliable monitoring for critical storage units.</p>
+              <ul>
+                <li>Up to 10 monitored devices</li>
+                <li>Threshold-based alerts</li>
+                <li>Monthly compliance reports</li>
+                <li>Email support</li>
+              </ul>
+              <a href="#contact" class="secondary-btn">Choose Starter</a>
+            </article>
+
+            <article class="plan-card reveal-up delay-1 plan-card--popular">
+              <span class="plan-tag plan-tag--popular">Most popular</span>
+              <h3>Professional</h3>
+              <div class="plan-price"><span>$</span>79<span class="plan-cycle">/month</span></div>
+              <p>For hospitals and pharmacy areas that require broader visibility and faster operational response.</p>
+              <ul>
+                <li>Multi-location visibility</li>
+                <li>Real-time dashboard</li>
+                <li>Multi-user access</li>
+                <li>Priority support</li>
+              </ul>
+              <a href="#contact" class="primary-btn">Choose Professional</a>
+            </article>
+
+            <article class="plan-card reveal-up delay-2 plan-card--scale">
+              <span class="plan-tag">Scale</span>
+              <h3>Enterprise</h3>
+              <div class="plan-price"><span>$</span>Custom<span class="plan-cycle">/month</span></div>
+              <p>For networks that need larger deployments, advanced analytics and custom integrations.</p>
+              <ul>
+                <li>Unlimited monitored devices</li>
+                <li>Advanced analytics</li>
+                <li>Regulatory export workflows</li>
+                <li>API and custom integration support</li>
+              </ul>
+              <a href="#contact" class="secondary-btn">Talk to Sales</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section product">
+      <div class="container product__grid" id="product">
+        <div class="product__content reveal-up">
+          <span class="section-kicker">About Product</span>
+          <h2>SafeLab is the digital infrastructure behind a safer clinical cold chain.</h2>
+          <p>
+            SafeLab combines connected hardware, a centralized dashboard and an alert engine to replace intermittent manual supervision
+            with continuous, predictive monitoring. The platform is designed to preserve biological inventory and support regulatory compliance.
+          </p>
+          <div class="check-list">
+            <div>Real-time environmental monitoring</div>
+            <div>Configurable preventive alerts</div>
+            <div>Automated PDF reporting</div>
+            <div>Immutable historical traceability</div>
+          </div>
+        </div>
+        <div class="product__mock reveal-up delay-1">
+          <div class="mock-screen">
+            <div class="mock-screen__top"></div>
+            <div class="mock-screen__body">
+              <div class="mock-screen__placeholder">Insert SafeLab dashboard / monitoring view here</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT US content merged here, keeping About Team as the only section label -->
+    <section class="section team">
+      <div class="container" id="team">
+        <div class="section-head reveal-up team-head">
+          <div>
+            <span class="section-kicker">About Team</span>
+            <h2>The startup behind SafeLab.</h2>
+          </div>
+        </div>
+
+        <div class="about__grid team-intro-grid">
+          <article class="glass-card reveal-up">
+            <h3>What we solve</h3>
+            <p>
+              We address a critical operational vulnerability: uncertainty and inefficiency in the storage of sensitive biological materials such as reactives, vaccines and samples.
+            </p>
+          </article>
+          <article class="glass-card reveal-up delay-1">
+            <h3>Our mission</h3>
+            <p>
+              Empower healthcare personnel with automated monitoring, early alerts and reliable records so they can focus on analysis and patient care instead of repetitive manual documentation.
+            </p>
+          </article>
+          <article class="glass-card reveal-up delay-2">
+            <h3>Our vision</h3>
+            <p>
+              Become the regional standard for intelligent biological inventory management, promoting zero-waste operations and pragmatic innovation in healthcare institutions.
+            </p>
+          </article>
+        </div>
+
+        <div class="team-grid">
+          <article class="team-card reveal-up">
+            <div class="avatar-placeholder">
+              <img src="assets/images/team-member-profiles/giusephi-carlos.png"
+                  alt="giusephi-profile-photo"
+                  class="team-avatar">
+            </div>
+            <h3>Ever Giusephi Carlos Lavado</h3>
+            <p>(description)</p>
+          </article>
+
+          <article class="team-card reveal-up delay-1">
+            <div class="avatar-placeholder">
+              <img src="assets/images/team-member-profiles/victor-espino.png"
+                  alt="victor-profile-photo"
+                  class="team-avatar">
+            </div>
+            <h3>Victor Manuel Espino Rossi</h3>
+            <p>(description)</p>
+          </article>
+
+          <article class="team-card reveal-up delay-2">
+            <div class="avatar-placeholder">
+              <img src="assets/images/team-member-profiles/braden-garcia.jpeg"
+                  alt="braden-profile-photo"
+                  class="team-avatar">
+            </div>
+            <h3>Braden Raid Garcia Cerpa</h3>
+            <p>(description)</p>
+          </article>
+
+          <article class="team-card reveal-up delay-3">
+            <div class="avatar-placeholder">
+              <img src="assets/images/team-member-profiles/valeria-rojas.jpeg"
+                  alt="valeria-profile-photo"
+                  class="team-avatar">
+            </div>
+            <h3>Valeria Alexandra Rojas Gómez</h3>
+            <p>(description)</p>
+          </article>
+
+          <article class="team-card reveal-up delay-4">
+            <div class="avatar-placeholder">
+              <img src="assets/images/team-member-profiles/oscar-vara.jpeg"
+                  alt="oscar-profile-photo"
+                  class="team-avatar">
+            </div>
+            <h3>Oscar Fernando Vara Velásquez</h3>
+            <p>(description)</p>
+          </article>
+        </div>
+
+      <div class="team-summary reveal-up">
+        <div class="placeholder-block large">Insert team photo, startup culture or collaboration summary here.</div>
+      </div>
+    </section>
+    </section>
+
+    <!-- Testimonials keep the imported carousel, but with a more blue brand-aligned background -->
+    <section class="section testimonials testimonials--brand" id="testimonials">
+      <div class="container section-head reveal-up testimonials-head">
+        <div>
+          <span class="section-kicker section-kicker--light">Testimonials</span>
+          <h2>Testimonials ready to be replaced with real validation interviews.</h2>
+        </div>
+      </div>
+
+      <div class="container testimonial-shell reveal-up">
+        <button class="carousel-arrow carousel-arrow--left" type="button" aria-label="Previous testimonial">‹</button>
+        <div class="testimonial-track" data-carousel-track>
+          <article class="testimonial-card is-active">
+            <div class="testimonial-card__avatar">PF</div>
+            <h3>Laboratory coordinator</h3>
+            <span>Clinical operations</span>
+            <p>
+              “SafeLab would give us the visibility we need to detect a thermal deviation immediately instead of discovering it hours later in a paper log.”
+            </p>
+          </article>
+          <article class="testimonial-card">
+            <div class="testimonial-card__avatar">DR</div>
+            <h3>Hospital pharmacy technician</h3>
+            <span>Storage supervision</span>
+            <p>
+              “Automated alerts and historical records would save us a lot of time and reduce the stress of manual checks during night shifts.”
+            </p>
+          </article>
+          <article class="testimonial-card">
+            <div class="testimonial-card__avatar">CO</div>
+            <h3>Quality manager</h3>
+            <span>Compliance perspective</span>
+            <p>
+              “A platform with immutable records and exportable reports would make audits much easier and reduce our exposure to regulatory findings.”
+            </p>
+          </article>
+        </div>
+        <button class="carousel-arrow carousel-arrow--right" type="button" aria-label="Next testimonial">›</button>
+        <div class="carousel-dots" data-carousel-dots></div>
+      </div>
+    </section>
+
+    <section class="section faq">
+      <div class="container section-head reveal-up" id="faq">
+        <div>
+          <span class="section-kicker">FAQ</span>
+          <h2>Questions healthcare visitors may ask first.</h2>
+        </div>
+      </div>
+
+      <div class="container faq__list reveal-up">
+        <details open>
+          <summary>What is SafeLab?</summary>
+          <p>
+            SafeLab is a B2B SaaS platform for automated environmental monitoring, preventive alerts and traceability in laboratories, hospitals and pharmacy networks.
+          </p>
+        </details>
+        <details>
+          <summary>Who is the solution designed for?</summary>
+          <p>
+            It is designed for laboratory coordinators, pharmacy technicians, quality managers and healthcare institutions responsible for sensitive biological inventory.
+          </p>
+        </details>
+        <details>
+          <summary>Does the platform help with audits and compliance?</summary>
+          <p>
+            Yes. SafeLab is intended to support audit processes through automated reporting and persistent historical records that improve traceability.
+          </p>
+        </details>
+        <details>
+          <summary>Can this section be updated later with real product evidence?</summary>
+          <p>
+            Yes. The structure is ready for screenshots, monitoring metrics, interview results, compliance evidence and product validation content.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section contact-section">
+      <div class="container contact-grid" id="contact">
+        <div class="contact-copy reveal-up">
+          <span class="eyebrow">CONTACT</span>
+          <h2>Let’s talk about safer cold chain operations.</h2>
+          <div class="contact-cards">
+            <div class="contact-card"><strong>Email</strong><span>con@safelab.io</span></div>
+            <div class="contact-card"><strong>Phone</strong><span>+51 999 999 999</span></div>
+            <div class="contact-card"><strong>Location</strong><span>Lima, Peru</span></div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal-up delay-1">
+          <div class="input-row">
+            <label>
+              <span>Name</span>
+              <input type="text" placeholder="Your name" />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" placeholder="your@email.com" />
+            </label>
+          </div>
+          <label>
+            <span>Organization</span>
+            <input type="text" placeholder="Laboratory, hospital or pharmacy network" />
+          </label>
+          <label>
+            <span>Service interest</span>
+            <select>
+              <option>Choose an option</option>
+              <option>Laboratory monitoring</option>
+              <option>Hospital / pharmacy deployment</option>
+              <option>Product demo</option>
+            </select>
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea rows="5" placeholder="Tell us about your needs, goals or questions."></textarea>
+          </label>
+          <button class="primary-btn submit-btn" type="submit">Send message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/images/logos/safelab-shield.png" alt="SafeLab logo in footer" class="brand-logo" />
+          <span class="brand-name">SafeLab</span>
+        </div>
+        <p>
+          SafeLab is the business website for a smart cold chain monitoring platform focused on operational safety, real-time visibility and zero-waste healthcare logistics.
+        </p>
+      </div>
+      <div>
+        <h4>Sections</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#benefits">Benefits</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#plans">Plans</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul>
+          <li><a href="#product">About Product</a></li>
+          <li><a href="#team">About Team</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SafeLab by SafeLab. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
