@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "SafeLab | Smart Cold Chain Monitoring for Clinical Laboratories",
-    "description": "SafeLab provides automated environmental monitoring, real-time alerts and audit-ready reporting for clinical laboratories, hospitals and pharmacy networks."
+    "title": "SafeLab | Real-Time Cold Chain Monitoring",
+    "description": "SafeLab helps clinical laboratories, hospitals and pharmacy networks monitor cold-chain conditions, detect risks early and maintain audit-ready traceability."
   },
   "nav": {
     "brandHome": "SafeLab home",
@@ -17,39 +17,38 @@
     "faq": "FAQ",
     "contact": "Contact",
     "languageSwitch": "Switch language (English / Spanish)",
-    "themeSwitch": "Theme switch visual button",
+    "themeSwitch": "Switch light and dark theme",
     "login": "Login",
     "signup": "Sign Up",
-    "openMenu": "Open navigation menu"
+    "openMenu": "Open navigation menu",
+    "mobile": "Mobile navigation",
+    "closeMenu": "Close navigation menu"
   },
   "hero": {
     "eyebrow": "SMART COLD CHAIN MONITORING",
     "title": {
-      "word1": "Protect",
-      "word2": "every",
-      "word3": "sample,",
-      "word4": "reactive",
-      "word5": "and",
-      "word6": "vaccine"
+      "prefix": "Protect every",
+      "accent": "sample, reagent and vaccine."
     },
-    "description": "SafeLab helps laboratories, hospitals and pharmacy networks protect biological inventory through continuous environmental monitoring, predictive alerts and audit-ready records that reduce risk, waste and manual control tasks.",
+    "description": "SafeLab centralizes cold-chain monitoring for laboratories, hospitals and pharmacy networks, helping teams detect environmental risks early and keep critical assets traceable from one operational view.",
     "ctaDemo": "Request a demo",
     "ctaExplore": "Explore platform",
     "stats": {
-      "monitoring": "Continuous monitoring",
-      "waste": "Waste reduction goal",
-      "onboarding": "Target onboarding time"
+      "monitoring": "Continuous environmental monitoring",
+      "modules": "Core operational modules",
+      "assets": "Critical asset categories protected"
     },
     "preview": "SafeLab dashboard preview",
+    "logoAlt": "SafeLab cold-chain monitoring shield",
     "cards": {
       "liveTag": "LIVE MONITORING",
-      "statusTitle": "Cold chain status",
-      "statusText": "Environmental data, equipment state and threshold deviations in one central view.",
+      "statusTitle": "Cold-chain overview",
+      "statusText": "Temperature, humidity, equipment status and threshold deviations in one operational view.",
       "inventoryLabel": "Protected inventory",
-      "inventoryItems": "Reactives · Vaccines · Samples",
-      "wasteTag": "ZERO WASTE",
-      "alertsTitle": "Automated alerts",
-      "alertsText": "Get notified before thermal excursions cause irreversible degradation or compliance issues."
+      "inventoryItems": "Samples · Reagents · Vaccines",
+      "alertTag": "EARLY ALERTS",
+      "alertsTitle": "Respond before conditions escalate",
+      "alertsText": "Surface critical deviations quickly so teams can act before inventory or compliance is affected."
     }
   },
   "benefits": {
@@ -154,22 +153,40 @@
   },
   "product": {
     "title": "SafeLab is the digital infrastructure behind a safer clinical cold chain.",
-    "description": "SafeLab combines connected hardware, a centralized dashboard and an alert engine to replace intermittent manual supervision with continuous, predictive monitoring. The platform is designed to preserve biological inventory and support regulatory compliance.",
+    "description": "SafeLab combines connected sensors, a centralized dashboard and a mobile app with an alert engine, replacing intermittent manual supervision with continuous, predictive monitoring. It is designed to preserve biological inventory and support regulatory compliance.",
     "check1": "Real-time environmental monitoring",
     "check2": "Configurable preventive alerts",
     "check3": "Automated PDF reporting",
     "check4": "Immutable historical traceability",
-    "mockPlaceholder": "Insert SafeLab dashboard / monitoring view here"
+    "mockPlaceholder": "Insert SafeLab dashboard / monitoring view here",
+    "features": {
+      "monitoring": "Real-time environmental monitoring",
+      "alerts": "Configurable preventive alerts",
+      "reports": "Automated compliance reports",
+      "traceability": "Historical traceability and audit trail",
+      "maintenance": "Equipment maintenance management",
+      "mobile": "Mobile app for laboratory staff"
+    },
+    "highlights": {
+      "monitoring": "Continuous monitoring",
+      "alerts": "Preventive alerts",
+      "access": "Access anywhere"
+    },
+    "images": {
+      "dashboardAlt": "SafeLab mobile app operational dashboard showing health score and key metrics",
+      "sensorAlt": "SafeLab mobile app sensor detail with current reading against allowed range",
+      "liveAlt": "SafeLab mobile app live monitoring view with sensor status counters"
+    }
   },
   "team": {
     "title": "The startup behind SafeLab.",
     "solve": {
       "title": "What we solve",
-      "text": "We address a critical operational vulnerability: uncertainty and inefficiency in the storage of sensitive biological materials such as reactives, vaccines and samples."
+      "text": "We address a critical operational vulnerability: uncertainty and inefficiency in the storage of sensitive biological materials such as reagents, vaccines and samples."
     },
     "mission": {
       "title": "Our mission",
-      "text": "Empower healthcare personnel with automated monitoring, early alerts and reliable records so they can focus on analysis and patient care instead of repetitive manual documentation."
+      "text": "Empower healthcare personnel with automated monitoring, early alerts and reliable records, so they can focus on analysis and patient care instead of repetitive manual documentation."
     },
     "vision": {
       "title": "Our vision",
@@ -177,44 +194,67 @@
     },
     "members": {
       "giusephi": {
-        "photoAlt": "giusephi-profile-photo"
+        "photoAlt": "Portrait of Ever Giusephi Carlos Lavado, SafeLab team member",
+        "role": "Mobile & Frontend Developer",
+        "bio": "Leads the mobile app architecture and the operational dashboard that gives teams a clear overview."
       },
       "victor": {
-        "photoAlt": "victor-profile-photo"
+        "photoAlt": "Portrait of Victor Manuel Espino Rossi, SafeLab team member",
+        "role": "Mobile Developer & Localization",
+        "bio": "Builds site organization and equipment maintenance features, and makes SafeLab available in English and Spanish."
       },
       "braden": {
-        "photoAlt": "braden-profile-photo"
+        "photoAlt": "Portrait of Braden Raid Garcia Cerpa, SafeLab team member",
+        "role": "Mobile & Web Developer",
+        "bio": "Develops alerts, incident tracking and the audit trail that keeps every event traceable."
       },
       "valeria": {
-        "photoAlt": "valeria-profile-photo"
+        "photoAlt": "Portrait of Valeria Alexandra Rojas Gómez, SafeLab team member",
+        "role": "Mobile & Frontend Developer",
+        "bio": "Creates the reporting and compliance features that turn monitoring data into audit-ready evidence."
       },
       "oscar": {
-        "photoAlt": "oscar-profile-photo"
+        "photoAlt": "Portrait of Oscar Fernando Vara Velásquez, SafeLab team member",
+        "role": "Mobile & Frontend Developer",
+        "bio": "Develops real-time sensor monitoring, from live readings to thresholds and calibration history."
       },
       "descriptionPlaceholder": "(description)"
     },
-    "summaryPlaceholder": "Insert team photo, startup culture or collaboration summary here."
+    "summaryPlaceholder": "Insert team photo, startup culture or collaboration summary here.",
+    "description": "MediTrack Startup is a five-person team building SafeLab, a monitoring system for the artifacts and supplies used in laboratories.",
+    "summary": {
+      "message": "Five people, one shared goal: making cold chain monitoring simple, reliable and audit-ready.",
+      "members": "Members",
+      "work": "Way of working",
+      "version": "Version control",
+      "scope": "Product scope"
+    }
   },
   "testimonials": {
-    "title": "Testimonials ready to be replaced with real validation interviews.",
+    "title": "What laboratory and pharmacy teams expect from SafeLab.",
     "previous": "Previous testimonial",
     "next": "Next testimonial",
+    "goTo": "Go to testimonial {n}",
     "coordinator": {
       "role": "Laboratory coordinator",
-      "area": "Clinical operations",
-      "quote": "“SafeLab would give us the visibility we need to detect a thermal deviation immediately instead of discovering it hours later in a paper log.”"
-    },
-    "technician": {
-      "role": "Hospital pharmacy technician",
-      "area": "Storage supervision",
-      "quote": "“Automated alerts and historical records would save us a lot of time and reduce the stress of manual checks during night shifts.”"
+      "area": "Hospital clinical laboratory",
+      "quote": "“We check fridges and freezers by hand three times per shift. Receiving an alert on the phone when a door stays open at night would protect the reagents we lose today.”"
     },
     "quality": {
       "role": "Quality manager",
-      "area": "Compliance perspective",
-      "quote": "“A platform with immutable records and exportable reports would make audits much easier and reduce our exposure to regulatory findings.”"
+      "area": "Pharmaceutical company",
+      "quote": "“Every week we download dataloggers and consolidate Excel files for audits. An immutable record with exportable reports would save us hours and avoid regulatory findings.”"
     },
-    "goTo": "Go to testimonial {n}"
+    "technician": {
+      "role": "Pharmacy technician",
+      "area": "Hospital pharmacy",
+      "quote": "“Problems are usually discovered when the damage is already done. Seeing temperature and humidity in real time would let us act before a batch is lost.”"
+    },
+    "logistics": {
+      "role": "Logistics assistant",
+      "area": "Pharmaceutical warehouse",
+      "quote": "“I would like to see every storage zone from one place and get a warning when a value is getting close to the limit, not only when it is already exceeded.”"
+    }
   },
   "faq": {
     "title": "Questions healthcare visitors may ask first.",
@@ -227,12 +267,16 @@
       "answer": "It is designed for laboratory coordinators, pharmacy technicians, quality managers and healthcare institutions responsible for sensitive biological inventory."
     },
     "q3": {
-      "question": "Does the platform help with audits and compliance?",
-      "answer": "Yes. SafeLab is intended to support audit processes through automated reporting and persistent historical records that improve traceability."
+      "question": "How does SafeLab notify my team about a deviation?",
+      "answer": "When a reading leaves the allowed range, SafeLab generates an alert in the mobile application with the equipment, the recorded value and the time, so the responsible staff can confirm and attend it."
     },
     "q4": {
-      "question": "Can this section be updated later with real product evidence?",
-      "answer": "Yes. The structure is ready for screenshots, monitoring metrics, interview results, compliance evidence and product validation content."
+      "question": "Can I configure the limits for each equipment?",
+      "answer": "Yes. Each monitored equipment can have its own temperature and humidity limits, and alerts are generated when those limits are exceeded."
+    },
+    "q5": {
+      "question": "Does the platform help with audits and compliance?",
+      "answer": "Yes. SafeLab is intended to support audit processes through automated reporting and persistent historical records that improve traceability."
     }
   },
   "contact": {
@@ -263,7 +307,7 @@
     "description": "SafeLab is the business website for a smart cold chain monitoring platform focused on operational safety, real-time visibility and zero-waste healthcare logistics.",
     "sections": "Sections",
     "more": "More",
-    "copyright": "© 2026 SafeLab by SafeLab. All rights reserved."
+    "copyright": "© 2026 SafeLab by MediTrack. All rights reserved."
   },
   "sections": {
     "benefits": "Benefits",
@@ -271,5 +315,14 @@
     "team": "About Team",
     "testimonials": "Testimonials",
     "faq": "FAQ"
+  },
+  "validation": {
+    "name": "Please enter your name.",
+    "email": "Please enter a valid email address.",
+    "organization": "Please enter your organization.",
+    "interest": "Please choose a service.",
+    "message": "Please write at least 10 characters.",
+    "success": "Thank you! Your message was sent. Our team will contact you soon.",
+    "review": "Please review the highlighted fields."
   }
 }
