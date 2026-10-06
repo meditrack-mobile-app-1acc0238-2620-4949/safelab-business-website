@@ -11,17 +11,17 @@
 // - .mobile-toggle
 // - .mobile-panel
 // ---------------------------------------------------------
-const mobileToggle = document.querySelector('.mobile-toggle');
-const mobilePanel = document.querySelector('.mobile-panel');
+const mobileToggle = document.querySelector(".mobile-toggle");
+const mobilePanel = document.querySelector(".mobile-panel");
 
 if (mobileToggle && mobilePanel) {
-  mobileToggle.addEventListener('click', () => {
-    mobilePanel.classList.toggle('open');
+  mobileToggle.addEventListener("click", () => {
+    mobilePanel.classList.toggle("open");
   });
 
-  mobilePanel.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      mobilePanel.classList.remove('open');
+  mobilePanel.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      mobilePanel.classList.remove("open");
     });
   });
 }
@@ -32,18 +32,18 @@ if (mobileToggle && mobilePanel) {
 // Affects elements with:
 // - .reveal-up
 // ---------------------------------------------------------
-const revealItems = document.querySelectorAll('.reveal-up');
+const revealItems = document.querySelectorAll(".reveal-up");
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
+        entry.target.classList.add("visible");
         revealObserver.unobserve(entry.target);
       }
     });
   },
-  { threshold: 0.14 }
+  { threshold: 0.14 },
 );
 
 revealItems.forEach((item) => revealObserver.observe(item));
@@ -56,25 +56,45 @@ revealItems.forEach((item) => revealObserver.observe(item));
 // - #testimonials .carousel-dots
 // - #testimonials .carousel-arrow--left / --right
 // ---------------------------------------------------------
-const cards = Array.from(document.querySelectorAll('.testimonials .testimonial-card'));
-const track = document.querySelector('.testimonials [data-carousel-track]');
-const dotsContainer = document.querySelector('.testimonials [data-carousel-dots]');
-const prevButton = document.querySelector('.testimonials .carousel-arrow--left');
-const nextButton = document.querySelector('.testimonials .carousel-arrow--right');
+const cards = Array.from(
+  document.querySelectorAll(".testimonials .testimonial-card"),
+);
+const track = document.querySelector(".testimonials [data-carousel-track]");
+const dotsContainer = document.querySelector(
+  ".testimonials [data-carousel-dots]",
+);
+const prevButton = document.querySelector(
+  ".testimonials .carousel-arrow--left",
+);
+const nextButton = document.querySelector(
+  ".testimonials .carousel-arrow--right",
+);
 
 let currentIndex = 0;
+
+// Uses the i18n module when it is loaded; otherwise keeps the English fallback.
+function translate(key, fallback, params) {
+  if (!window.SafeLabI18n) return fallback;
+  const value = window.SafeLabI18n.t(key, params);
+  return value === key ? fallback : value;
+}
 let carouselInterval;
 
 function buildDots() {
   if (!dotsContainer) return;
 
-  dotsContainer.innerHTML = '';
+  dotsContainer.innerHTML = "";
 
   cards.forEach((_, index) => {
-    const dot = document.createElement('button');
-    dot.type = 'button';
-    dot.setAttribute('aria-label', `Go to testimonial ${index + 1}`);
-    dot.addEventListener('click', () => {
+    const dot = document.createElement("button");
+    dot.type = "button";
+    dot.setAttribute(
+      "aria-label",
+      translate("testimonials.goTo", `Go to testimonial ${index + 1}`, {
+        n: index + 1,
+      }),
+    );
+    dot.addEventListener("click", () => {
       goToSlide(index);
       resetAutoPlay();
     });
@@ -84,12 +104,12 @@ function buildDots() {
 
 function updateCarousel() {
   cards.forEach((card, index) => {
-    card.classList.toggle('is-active', index === currentIndex);
+    card.classList.toggle("is-active", index === currentIndex);
   });
 
-  const dots = dotsContainer ? dotsContainer.querySelectorAll('button') : [];
+  const dots = dotsContainer ? dotsContainer.querySelectorAll("button") : [];
   dots.forEach((dot, index) => {
-    dot.classList.toggle('is-active', index === currentIndex);
+    dot.classList.toggle("is-active", index === currentIndex);
   });
 }
 
@@ -122,18 +142,18 @@ if (cards.length) {
   updateCarousel();
   startAutoPlay();
 
-  nextButton?.addEventListener('click', () => {
+  nextButton?.addEventListener("click", () => {
     nextSlide();
     resetAutoPlay();
   });
 
-  prevButton?.addEventListener('click', () => {
+  prevButton?.addEventListener("click", () => {
     prevSlide();
     resetAutoPlay();
   });
 
-  track?.addEventListener('mouseenter', () => clearInterval(carouselInterval));
-  track?.addEventListener('mouseleave', startAutoPlay);
+  track?.addEventListener("mouseenter", () => clearInterval(carouselInterval));
+  track?.addEventListener("mouseleave", startAutoPlay);
 }
 
 // ---------------------------------------------------------
@@ -141,9 +161,9 @@ if (cards.length) {
 // Small UX safeguard so the placeholder form does not refresh
 // the page while still looking functional in the prototype.
 // ---------------------------------------------------------
-const contactForm = document.querySelector('.contact-form');
+const contactForm = document.querySelector(".contact-form");
 if (contactForm) {
-  contactForm.addEventListener('submit', (event) => {
+  contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
   });
 }
@@ -153,38 +173,70 @@ if (contactForm) {
 // Ensures each topbar link lands with the section title visible,
 // matching the earlier reference behavior.
 // ---------------------------------------------------------
-const topbar = document.querySelector('.navbar');
+const topbar = document.querySelector(".navbar");
 
 function getTopbarOffset() {
   return topbar ? topbar.offsetHeight + 18 : 104;
 }
 
 function scrollToHashTarget(hash, updateHistory = true) {
-  if (!hash || hash === '#') return;
+  if (!hash || hash === "#") return;
   const target = document.querySelector(hash);
   if (!target) return;
 
-  const y = target.getBoundingClientRect().top + window.scrollY - getTopbarOffset();
-  window.scrollTo({ top: y, behavior: 'smooth' });
+  const y =
+    target.getBoundingClientRect().top + window.scrollY - getTopbarOffset();
+  window.scrollTo({ top: y, behavior: "smooth" });
 
   if (updateHistory) {
-    history.replaceState(null, '', hash);
+    history.replaceState(null, "", hash);
   }
 }
 
-document.querySelectorAll('.nav-menu a, .mobile-panel a').forEach((link) => {
-  link.addEventListener('click', (event) => {
-    const href = link.getAttribute('href');
-    if (!href || !href.startsWith('#')) return;
+document.querySelectorAll(".nav-menu a, .mobile-panel a").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const href = link.getAttribute("href");
+    if (!href || !href.startsWith("#")) return;
 
     event.preventDefault();
-    if (mobilePanel) mobilePanel.classList.remove('open');
+    if (mobilePanel) mobilePanel.classList.remove("open");
     scrollToHashTarget(href, true);
   });
 });
 
-window.addEventListener('load', () => {
+window.addEventListener("load", () => {
   if (window.location.hash) {
     setTimeout(() => scrollToHashTarget(window.location.hash, false), 40);
   }
+});
+
+// ---------------------------------------------------------
+// 6) Language switch (EN / ES)
+// Connects the EN / ES buttons of the navbar and the mobile menu
+// with the i18n module (assets/i18n/i18n.js).
+// Affects:
+// - [data-lang-switch] buttons in .nav-actions and .mobile-panel-actions
+// - testimonial dots labels (generated by JavaScript)
+// ---------------------------------------------------------
+const languageButtons = document.querySelectorAll("[data-lang-switch]");
+
+languageButtons.forEach((button) => {
+  button.addEventListener("click", async () => {
+    if (!window.SafeLabI18n) return;
+    button.disabled = true;
+    await window.SafeLabI18n.toggleLanguage();
+    button.disabled = false;
+  });
+});
+
+document.addEventListener("safelab:languagechange", () => {
+  if (!dotsContainer) return;
+  dotsContainer.querySelectorAll("button").forEach((dot, index) => {
+    dot.setAttribute(
+      "aria-label",
+      translate("testimonials.goTo", `Go to testimonial ${index + 1}`, {
+        n: index + 1,
+      }),
+    );
+  });
 });
