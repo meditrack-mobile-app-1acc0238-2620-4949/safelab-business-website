@@ -1342,4 +1342,30 @@ textarea { resize: vertical; }
   .team-summary__facts { grid-template-columns: 1fr; }
 }
 
+/* Responsive refinements for product and team */
+@media (max-width: 1080px) {
+  .phone-stage {
+    max-width: 560px;
+    min-height: 620px;
+    margin-inline: auto;
+  }
+}
+
+/* Tablet: 3 columns with the last row centered */
+@media (min-width: 761px) and (max-width: 1300px) {
+  .team-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .team-card { grid-column: span 2; }
+  .team-card:nth-child(4) { grid-column: 2 / span 2; }
+  .team-card:nth-child(5) { grid-column: 4 / span 2; }
+}
+
+/* Large phones: 2 columns with the last card centered */
+@media (min-width: 480px) and (max-width: 760px) {
+  .team-card:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 11px);
+  }
+}
+
 /* ===== end About Product & Team ===== */
