@@ -1855,3 +1855,42 @@ input.is-invalid, select.is-invalid, textarea.is-invalid {
     animation: none !important;
   }
 }
+
+
+/* =========================================================
+   TB1 develop consolidation: functional theme & accessibility
+   ========================================================= */
+body.dark {
+  --bg: #07111f;
+  --bg-2: #0b1728;
+  --surface: rgba(16, 31, 51, 0.88);
+  --surface-strong: #101f33;
+  --surface-border: rgba(151, 188, 223, 0.18);
+  --text: #e7f0fb;
+  --text-soft: #b6c7db;
+  --title: #f4f9ff;
+  --line: rgba(180, 207, 235, 0.18);
+  background:
+    radial-gradient(circle at top left, rgba(34,199,200,0.10), transparent 26%),
+    radial-gradient(circle at 85% 18%, rgba(58,111,210,0.16), transparent 24%),
+    linear-gradient(180deg, var(--bg), #0a1424 55%, var(--bg-2) 100%);
+  color: var(--text);
+}
+body.dark .alt-section {
+  background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0.045));
+  border-color: rgba(255,255,255,0.08);
+}
+body.dark .mobile-toggle { background: rgba(255,255,255,0.07); }
+body.dark .mobile-toggle span { background: var(--text); }
+body.dark .nav-menu a:hover,
+body.dark .nav-menu a.is-active { color: var(--accent-2); }
+body.dark .footer { border-top-color: rgba(255,255,255,0.08); }
+
+:focus-visible {
+  outline: 3px solid rgba(34, 199, 200, 0.72);
+  outline-offset: 3px;
+}
+[data-theme-switch][aria-pressed="true"] {
+  border-color: rgba(34,199,200,0.55);
+  box-shadow: 0 0 0 3px rgba(34,199,200,0.10);
+}
