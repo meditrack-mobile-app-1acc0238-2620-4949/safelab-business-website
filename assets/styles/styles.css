@@ -589,30 +589,12 @@ body.dark .plan-card--popular {
   gap: 12px;
   margin-top: 26px;
 }
-.check-list div,
 .contact-card {
   padding: 14px 18px;
   border-radius: 16px;
   background: rgba(242, 247, 246, 0.95);
   border: 1px solid rgba(97, 135, 175, 0.16);
   font-weight: 600;
-}
-.mock-screen { padding: 22px; border-radius: 24px; }
-.mock-screen__top {
-  height: 6px;
-  width: 120px;
-  border-radius: 999px;
-  background: rgba(27, 167, 177, 0.22);
-}
-.mock-screen__body {
-  min-height: 440px;
-  margin-top: 18px;
-  border-radius: 24px;
-  border: 1px dashed rgba(111, 146, 184, 0.45);
-  display: grid;
-  place-items: center;
-  color: var(--text-soft);
-  background: linear-gradient(180deg, rgba(11, 58, 120, 0.08), rgba(27, 167, 177, 0.10));
 }
 
 /* Team */
@@ -627,9 +609,9 @@ body.dark .plan-card--popular {
 
 /* FOTO PERFIL CONTENEDOR */
 .team-card .avatar-placeholder{
-  width: 150px;
-  height: 150px;
-  border-radius: 22px;
+  width: 136px;
+  height: 136px;
+  border-radius: 50%;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -649,27 +631,11 @@ body.dark .plan-card--popular {
   height: 100%;
   object-fit: cover;
   object-position: center top;
-  border-radius: 22px;
+  border-radius: 50%;
   display: block;
 }
 
 .team-card {
-  text-align: center;
-}
-
-.placeholder-block {
-  margin-top: 24px;
-  padding: 32px;
-  border-radius: 26px;
-  border: 1px dashed rgba(23,55,96,0.22);
-  color: var(--text-soft);
-  background: rgba(230, 246, 247, 0.52);
-}
-
-.placeholder-block.large {
-  min-height: 180px;
-  display: grid;
-  place-items: center;
   text-align: center;
 }
 /* Testimonials */
@@ -1139,6 +1105,271 @@ textarea { resize: vertical; }
 
 .hero-title__line--mixed{display:inline-flex !important; align-items:baseline; gap:0.16em; white-space:nowrap;}
 .hero-title__child{margin-top:-0.02em;}
+
+/* ===== About Product & Team (feature/tb1-product-team) ===== */
+
+/* Product mockup: CSS phone frames with app screenshots */
+.phone-stage {
+  --phone-front-w: 270px;
+  --phone-back-w: 204px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 640px;
+  background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 64%);
+}
+
+.phone {
+  position: relative;
+  padding: 9px;
+  border-radius: 38px;
+  background: var(--primary-dark);
+  box-shadow: var(--shadow), inset 0 0 0 2px rgba(255, 255, 255, 0.14);
+}
+
+.phone::before {
+  content: "";
+  position: absolute;
+  top: 19px;
+  left: 50%;
+  z-index: 2;
+  width: 64px;
+  height: 16px;
+  border-radius: 999px;
+  background: var(--primary-dark);
+  transform: translateX(-50%);
+}
+
+.phone img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 690 / 1536;
+  border-radius: 29px;
+  object-fit: cover;
+  background: var(--surface-strong);
+}
+
+.phone--front {
+  z-index: 2;
+  width: var(--phone-front-w);
+}
+
+.phone--back {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  width: var(--phone-back-w);
+}
+
+.phone--left { left: 3%; transform: translateY(-50%) rotate(-6deg); }
+.phone--right { right: 3%; transform: translateY(-50%) rotate(6deg); }
+
+@media (max-width: 760px) {
+  .phone-stage { --phone-front-w: 244px; min-height: 560px; }
+  .phone--back { display: none; }
+}
+
+/* Product content: features list and highlights */
+.product__content h2 { margin: 18px 0 16px; }
+
+.check-list {
+  margin: 26px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.check-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: var(--surface-strong);
+  border: 1px solid var(--surface-border);
+  font-weight: 600;
+  color: var(--title);
+}
+
+.check-list li svg {
+  flex: none;
+  width: 28px;
+  height: 28px;
+  padding: 5px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: var(--surface-strong);
+}
+
+.product__highlights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.product__highlight {
+  padding: 18px;
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  box-shadow: var(--shadow-soft);
+}
+
+.product__highlight strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: clamp(1.25rem, 1.9vw, 1.65rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--title);
+}
+
+.product__highlight span {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-soft);
+}
+
+@media (max-width: 760px) {
+  .product__highlights { grid-template-columns: 1fr; }
+}
+
+/* Team members */
+.team-card { padding: 28px 18px 26px; }
+
+.team-card h3 {
+  margin-bottom: 12px;
+  font-size: 1.12rem;
+}
+
+.team-role {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--primary) 14%, transparent);
+  font-size: 0.8rem;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+  color: var(--primary-dark);
+}
+
+.team-bio {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 760px) {
+  .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 479px) {
+  .team-grid { grid-template-columns: 1fr; }
+}
+
+/* Team pillars: what we solve, mission and vision */
+.team-pillar__icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 18px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--primary-dark) 16%, transparent), color-mix(in srgb, var(--primary) 20%, transparent));
+  color: var(--primary-dark);
+}
+
+/* Team summary: closing message and key facts */
+.team-summary {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 32px;
+  align-items: center;
+  margin-top: 26px;
+  padding: 40px;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, var(--primary-dark), color-mix(in srgb, var(--primary-dark) 62%, var(--primary)));
+  box-shadow: var(--shadow);
+}
+
+.team-summary__message {
+  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--surface-strong);
+}
+
+.team-summary__facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.team-summary__facts li {
+  padding: 16px 18px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.team-summary__facts strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--surface-strong);
+}
+
+.team-summary__facts span {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+@media (max-width: 1080px) {
+  .team-summary { grid-template-columns: 1fr; padding: 32px 28px; }
+}
+
+@media (max-width: 479px) {
+  .team-summary__facts { grid-template-columns: 1fr; }
+}
+
+/* Responsive refinements for product and team */
+@media (max-width: 1080px) {
+  .phone-stage {
+    max-width: 560px;
+    min-height: 620px;
+    margin-inline: auto;
+  }
+}
+
+/* Tablet: 3 columns with the last row centered */
+@media (min-width: 761px) and (max-width: 1300px) {
+  .team-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .team-card { grid-column: span 2; }
+  .team-card:nth-child(4) { grid-column: 2 / span 2; }
+  .team-card:nth-child(5) { grid-column: 4 / span 2; }
+}
+
+/* Large phones: 2 columns with the last card centered */
+@media (min-width: 480px) and (max-width: 760px) {
+  .team-card:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 11px);
+  }
+}
+
+/* ===== end About Product & Team ===== */
+
 /* Benefits, services and plans: photographic cards with a simpler visual treatment */
 .benefits .section-head {
   grid-template-columns: 1fr;
