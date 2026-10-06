@@ -1,61 +1,145 @@
 // =========================================================
-// SafeLab merged landing page - JS commented by behavior source
-// Base interactions kept from the merged version and adjusted
-// after the correction sketch.
+// SafeLab Business Website - shared interactions
+// Front section: responsive navigation + smooth in-page access
 // =========================================================
 
-// ---------------------------------------------------------
-// 1) Mobile navigation
-// Base from file 1 / merged version
-// Affects:
-// - .mobile-toggle
-// - .mobile-panel
-// ---------------------------------------------------------
+const topbar = document.querySelector('.navbar');
 const mobileToggle = document.querySelector('.mobile-toggle');
 const mobilePanel = document.querySelector('.mobile-panel');
 
+function getTopbarOffset() {
+  return topbar ? topbar.offsetHeight + 16 : 104;
+}
+
+function closeMobileMenu() {
+  if (!mobileToggle || !mobilePanel) return;
+  mobilePanel.classList.remove('open');
+  mobileToggle.setAttribute('aria-expanded', 'false');
+  mobileToggle.setAttribute('aria-label', 'Open navigation menu');
+  document.body.classList.remove('mobile-menu-open');
+}
+
+function openMobileMenu() {
+  if (!mobileToggle || !mobilePanel) return;
+  mobilePanel.classList.add('open');
+  mobileToggle.setAttribute('aria-expanded', 'true');
+  mobileToggle.setAttribute('aria-label', 'Close navigation menu');
+  document.body.classList.add('mobile-menu-open');
+}
+
 if (mobileToggle && mobilePanel) {
   mobileToggle.addEventListener('click', () => {
-    mobilePanel.classList.toggle('open');
+    const isOpen = mobileToggle.getAttribute('aria-expanded') === 'true';
+    isOpen ? closeMobileMenu() : openMobileMenu();
   });
 
-  mobilePanel.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      mobilePanel.classList.remove('open');
-    });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeMobileMenu();
+  });
+
+  document.addEventListener('click', (event) => {
+    const target = event.target;
+    if (!(target instanceof Node)) return;
+    if (!mobilePanel.classList.contains('open')) return;
+    if (mobilePanel.contains(target) || mobileToggle.contains(target)) return;
+    closeMobileMenu();
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1080) closeMobileMenu();
   });
 }
 
-// ---------------------------------------------------------
-// 2) Reveal on scroll
-// Base from both previous files, unified in one observer
-// Affects elements with:
-// - .reveal-up
-// ---------------------------------------------------------
+function scrollToHashTarget(hash, updateHistory = true) {
+  if (!hash || hash === '#') return;
+
+  const target = document.querySelector(hash);
+  if (!target) return;
+
+  const y = target.getBoundingClientRect().top + window.scrollY - getTopbarOffset();
+  window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+
+  if (updateHistory) {
+    history.pushState(null, '', hash);
+  }
+}
+
+// Smooth navigation for every internal section link, including navbar,
+// mobile menu, hero CTAs and footer navigation.
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    const href = link.getAttribute('href');
+    if (!href || href === '#') return;
+
+    const target = document.querySelector(href);
+    if (!target) return;
+
+    event.preventDefault();
+    closeMobileMenu();
+    scrollToHashTarget(href, true);
+  });
+});
+
+window.addEventListener('load', () => {
+  if (window.location.hash) {
+    setTimeout(() => scrollToHashTarget(window.location.hash, false), 40);
+  }
+});
+
+// Highlight the active top-level section without changing the URL.
+const primaryLinks = Array.from(document.querySelectorAll('.nav-menu a[href^="#"]'));
+const observedSections = primaryLinks
+  .map((link) => document.querySelector(link.getAttribute('href')))
+  .filter(Boolean);
+
+if ('IntersectionObserver' in window && observedSections.length) {
+  const activeSectionObserver = new IntersectionObserver(
+    (entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+      if (!visible) return;
+
+      primaryLinks.forEach((link) => {
+        const isActive = link.getAttribute('href') === `#${visible.target.id}`;
+        link.classList.toggle('is-active', isActive);
+        if (isActive) link.setAttribute('aria-current', 'page');
+        else link.removeAttribute('aria-current');
+      });
+    },
+    {
+      rootMargin: '-22% 0px -62% 0px',
+      threshold: [0, 0.05, 0.2]
+    }
+  );
+
+  observedSections.forEach((section) => activeSectionObserver.observe(section));
+}
+
+// Reveal-on-scroll animation.
 const revealItems = document.querySelectorAll('.reveal-up');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.14 }
-);
+if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+  revealItems.forEach((item) => item.classList.add('visible'));
+} else {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.14 }
+  );
 
-revealItems.forEach((item) => revealObserver.observe(item));
+  revealItems.forEach((item) => revealObserver.observe(item));
+}
 
-// ---------------------------------------------------------
-// 4) Testimonials carousel
-// Logic adapted from the imported testimonial section
-// Affects:
-// - #testimonials .testimonial-card
-// - #testimonials .carousel-dots
-// - #testimonials .carousel-arrow--left / --right
-// ---------------------------------------------------------
+// Testimonials carousel.
 const cards = Array.from(document.querySelectorAll('.testimonials .testimonial-card'));
 const track = document.querySelector('.testimonials [data-carousel-track]');
 const dotsContainer = document.querySelector('.testimonials [data-carousel-dots]');
@@ -67,7 +151,6 @@ let carouselInterval;
 
 function buildDots() {
   if (!dotsContainer) return;
-
   dotsContainer.innerHTML = '';
 
   cards.forEach((_, index) => {
@@ -108,7 +191,8 @@ function prevSlide() {
 }
 
 function startAutoPlay() {
-  if (cards.length < 2) return;
+  if (cards.length < 2 || prefersReducedMotion) return;
+  clearInterval(carouselInterval);
   carouselInterval = setInterval(nextSlide, 4800);
 }
 
@@ -136,55 +220,11 @@ if (cards.length) {
   track?.addEventListener('mouseleave', startAutoPlay);
 }
 
-// ---------------------------------------------------------
-// 5) Form behavior placeholder
-// Small UX safeguard so the placeholder form does not refresh
-// the page while still looking functional in the prototype.
-// ---------------------------------------------------------
+// Prototype form: prevent an accidental full-page refresh until a real
+// submission service is connected by the corresponding implementation task.
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', (event) => {
     event.preventDefault();
   });
 }
-
-// ---------------------------------------------------------
-// 5) Sticky-topbar anchor correction
-// Ensures each topbar link lands with the section title visible,
-// matching the earlier reference behavior.
-// ---------------------------------------------------------
-const topbar = document.querySelector('.navbar');
-
-function getTopbarOffset() {
-  return topbar ? topbar.offsetHeight + 18 : 104;
-}
-
-function scrollToHashTarget(hash, updateHistory = true) {
-  if (!hash || hash === '#') return;
-  const target = document.querySelector(hash);
-  if (!target) return;
-
-  const y = target.getBoundingClientRect().top + window.scrollY - getTopbarOffset();
-  window.scrollTo({ top: y, behavior: 'smooth' });
-
-  if (updateHistory) {
-    history.replaceState(null, '', hash);
-  }
-}
-
-document.querySelectorAll('.nav-menu a, .mobile-panel a').forEach((link) => {
-  link.addEventListener('click', (event) => {
-    const href = link.getAttribute('href');
-    if (!href || !href.startsWith('#')) return;
-
-    event.preventDefault();
-    if (mobilePanel) mobilePanel.classList.remove('open');
-    scrollToHashTarget(href, true);
-  });
-});
-
-window.addEventListener('load', () => {
-  if (window.location.hash) {
-    setTimeout(() => scrollToHashTarget(window.location.hash, false), 40);
-  }
-});
