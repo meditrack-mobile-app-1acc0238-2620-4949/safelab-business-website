@@ -1,0 +1,275 @@
+{
+  "meta": {
+    "title": "SafeLab | Monitoreo inteligente de la cadena de frío para laboratorios clínicos",
+    "description": "SafeLab ofrece monitoreo ambiental automatizado, alertas en tiempo real y reportes listos para auditoría para laboratorios clínicos, hospitales y redes de farmacias."
+  },
+  "nav": {
+    "brandHome": "Inicio de SafeLab",
+    "logoAlt": "Logotipo de escudo de SafeLab",
+    "primary": "Navegación principal",
+    "home": "Inicio",
+    "benefits": "Beneficios",
+    "services": "Servicios",
+    "plans": "Planes",
+    "product": "Producto",
+    "team": "Equipo",
+    "testimonials": "Testimonios",
+    "faq": "FAQ",
+    "contact": "Contacto",
+    "languageSwitch": "Cambiar idioma (inglés / español)",
+    "themeSwitch": "Cambiar tema de color",
+    "login": "Ingresar",
+    "signup": "Regístrate",
+    "openMenu": "Abrir menú de navegación"
+  },
+  "hero": {
+    "eyebrow": "MONITOREO INTELIGENTE DE LA CADENA DE FRÍO",
+    "title": {
+      "word1": "Protege",
+      "word2": "cada",
+      "word3": "muestra,",
+      "word4": "reactivo",
+      "word5": "y",
+      "word6": "vacuna"
+    },
+    "description": "SafeLab ayuda a laboratorios, hospitales y redes de farmacias a proteger su inventario biológico mediante monitoreo ambiental continuo, alertas predictivas y registros listos para auditoría que reducen el riesgo, las pérdidas y las tareas de control manual.",
+    "ctaDemo": "Solicitar una demo",
+    "ctaExplore": "Explorar la plataforma",
+    "stats": {
+      "monitoring": "Monitoreo continuo",
+      "waste": "Meta de reducción de pérdidas",
+      "onboarding": "Tiempo objetivo de implementación"
+    },
+    "preview": "Vista previa del dashboard de SafeLab",
+    "cards": {
+      "liveTag": "MONITOREO EN VIVO",
+      "statusTitle": "Estado de la cadena de frío",
+      "statusText": "Datos ambientales, estado de los equipos y desviaciones de umbral en una sola vista central.",
+      "inventoryLabel": "Inventario protegido",
+      "inventoryItems": "Reactivos · Vacunas · Muestras",
+      "wasteTag": "CERO PÉRDIDAS",
+      "alertsTitle": "Alertas automatizadas",
+      "alertsText": "Recibe avisos antes de que una desviación térmica cause daños irreversibles o problemas de cumplimiento."
+    }
+  },
+  "benefits": {
+    "title": "Valor visible para laboratorios y operaciones de salud.",
+    "description": "La plataforma se basa en la trazabilidad, la prevención de riesgos y la eficiencia operativa, y ayuda a los equipos de salud a reemplazar el control manual por monitoreo continuo y datos confiables.",
+    "safety": {
+      "title": "Protección de la seguridad clínica",
+      "text": "Protege materiales críticos detectando riesgos de temperatura antes de que comprometan la confiabilidad diagnóstica o la seguridad del paciente.",
+      "imageAlt": "Sistema de almacenamiento automatizado que protege materiales clínicos"
+    },
+    "visibility": {
+      "title": "Visibilidad remota 24/7",
+      "text": "Supervisa de forma continua las condiciones de almacenamiento, el estado de los equipos y las desviaciones térmicas desde un dashboard centralizado.",
+      "imageAlt": "Profesionales de salud revisando datos de monitoreo"
+    },
+    "response": {
+      "title": "Respuesta temprana a incidentes",
+      "text": "Las alertas configurables ayudan a los equipos a reaccionar antes de que una falla en la cadena de frío se convierta en pérdida de stock o en un riesgo regulatorio.",
+      "imageAlt": "Especialista revisando datos operativos de monitoreo"
+    },
+    "documentation": {
+      "title": "Menos documentación manual",
+      "text": "Reduce las horas dedicadas a bitácoras en papel y a la supervisión repetitiva para que los especialistas se enfoquen en trabajo clínico de mayor valor.",
+      "imageAlt": "Profesional de salud usando documentación digital"
+    },
+    "traceability": {
+      "title": "Trazabilidad lista para auditorías",
+      "text": "Mantén registros históricos, estructurados y exportables que respaldan inspecciones, auditorías y controles de calidad.",
+      "imageAlt": "Profesional revisando reportes de trazabilidad y auditoría"
+    },
+    "saas": {
+      "title": "Adopción SaaS escalable",
+      "text": "Implementa una plataforma web moderna, adecuada para instituciones con recursos limitados y sin infraestructura local compleja.",
+      "imageAlt": "Profesionales de farmacia usando un flujo de trabajo digital escalable"
+    }
+  },
+  "services": {
+    "eyebrow": "SERVICIOS",
+    "title": "Soluciones diseñadas para la cadena de frío clínica.",
+    "description": "SafeLab acompaña a laboratorios, hospitales y redes de farmacias con funciones modulares de monitoreo, alertas y reportes.",
+    "laboratories": {
+      "badge": "SEGMENTO 01",
+      "title": "Laboratorios clínicos",
+      "imageAlt": "Profesional de laboratorio clínico trabajando con un microscopio",
+      "item1": "Monitoreo ambiental continuo",
+      "item2": "Alertas por umbrales",
+      "item3": "Registros digitales de trazabilidad",
+      "item4": "Menos registro manual de temperatura"
+    },
+    "hospitals": {
+      "badge": "SEGMENTO 02",
+      "title": "Hospitales y farmacias clínicas",
+      "imageAlt": "Área de almacenamiento de una farmacia clínica y un hospital",
+      "item1": "Dashboard centralizado para varios equipos",
+      "item2": "Visibilidad de varias sedes",
+      "item3": "Trazabilidad lista para auditorías",
+      "item4": "Respuesta más rápida ante fallas"
+    },
+    "platform": {
+      "badge": "PLATAFORMA CENTRAL",
+      "title": "Plataforma de monitoreo SafeLab",
+      "imageAlt": "Dashboard de monitoreo de SafeLab en uso",
+      "item1": "Flujo de datos integrado desde sensores",
+      "item2": "Historial listo para auditorías",
+      "item3": "Incorporación guiada",
+      "item4": "Arquitectura SaaS escalable"
+    }
+  },
+  "plans": {
+    "eyebrow": "PLANES",
+    "title": "Planes flexibles para cada organización de salud.",
+    "perMonth": "/mes",
+    "custom": "A medida",
+    "starter": {
+      "tag": "Básico",
+      "imageAlt": "Equipo de un laboratorio clínico pequeño para el plan Starter Lab",
+      "description": "Para laboratorios pequeños que necesitan un monitoreo confiable de sus unidades de almacenamiento críticas.",
+      "item1": "Hasta 10 dispositivos monitoreados",
+      "item3": "Reportes mensuales de cumplimiento",
+      "item4": "Soporte por correo electrónico",
+      "cta": "Elegir Starter"
+    },
+    "professional": {
+      "tag": "Más popular",
+      "imageAlt": "Laboratorio moderno para el plan Professional",
+      "description": "Para hospitales y áreas de farmacia que requieren mayor visibilidad y una respuesta operativa más rápida.",
+      "item2": "Dashboard en tiempo real",
+      "item3": "Acceso multiusuario",
+      "item4": "Soporte prioritario",
+      "cta": "Elegir Professional"
+    },
+    "enterprise": {
+      "tag": "Escala",
+      "imageAlt": "Operación de laboratorio a gran escala para el plan Enterprise",
+      "description": "Para redes que necesitan despliegues más grandes, analítica avanzada e integraciones a medida.",
+      "item1": "Dispositivos monitoreados ilimitados",
+      "item2": "Analítica avanzada",
+      "item3": "Exportación de datos para fines regulatorios",
+      "item4": "Soporte de API e integraciones a medida",
+      "cta": "Hablar con ventas"
+    }
+  },
+  "product": {
+    "title": "SafeLab es la infraestructura digital detrás de una cadena de frío clínica más segura.",
+    "description": "SafeLab combina hardware conectado, un dashboard centralizado y un motor de alertas para reemplazar la supervisión manual intermitente por un monitoreo continuo y predictivo. La plataforma está diseñada para preservar el inventario biológico y respaldar el cumplimiento regulatorio.",
+    "check1": "Monitoreo ambiental en tiempo real",
+    "check2": "Alertas preventivas configurables",
+    "check3": "Reportes automáticos en PDF",
+    "check4": "Trazabilidad histórica inmutable",
+    "mockPlaceholder": "Inserta aquí el dashboard o la vista de monitoreo de SafeLab"
+  },
+  "team": {
+    "title": "La startup detrás de SafeLab.",
+    "solve": {
+      "title": "Qué resolvemos",
+      "text": "Atendemos una vulnerabilidad operativa crítica: la incertidumbre y la ineficiencia en el almacenamiento de materiales biológicos sensibles, como reactivos, vacunas y muestras."
+    },
+    "mission": {
+      "title": "Nuestra misión",
+      "text": "Empoderar al personal de salud con monitoreo automatizado, alertas tempranas y registros confiables para que pueda enfocarse en el análisis y la atención al paciente, en lugar de la documentación manual repetitiva."
+    },
+    "vision": {
+      "title": "Nuestra visión",
+      "text": "Convertirnos en el estándar regional de gestión inteligente del inventario biológico, promoviendo operaciones sin pérdidas y una innovación pragmática en las instituciones de salud."
+    },
+    "members": {
+      "giusephi": {
+        "photoAlt": "Foto de perfil de Ever Giusephi Carlos Lavado"
+      },
+      "victor": {
+        "photoAlt": "Foto de perfil de Victor Manuel Espino Rossi"
+      },
+      "braden": {
+        "photoAlt": "Foto de perfil de Braden Raid Garcia Cerpa"
+      },
+      "valeria": {
+        "photoAlt": "Foto de perfil de Valeria Alexandra Rojas Gómez"
+      },
+      "oscar": {
+        "photoAlt": "Foto de perfil de Oscar Fernando Vara Velásquez"
+      },
+      "descriptionPlaceholder": "(descripción)"
+    },
+    "summaryPlaceholder": "Inserta aquí una foto del equipo, la cultura de la startup o un resumen de la colaboración."
+  },
+  "testimonials": {
+    "title": "Testimonios listos para reemplazarse con entrevistas de validación reales.",
+    "previous": "Testimonio anterior",
+    "next": "Testimonio siguiente",
+    "coordinator": {
+      "role": "Coordinador de laboratorio",
+      "area": "Operaciones clínicas",
+      "quote": "“SafeLab nos daría la visibilidad que necesitamos para detectar una desviación térmica de inmediato, en lugar de descubrirla horas después en una bitácora en papel.”"
+    },
+    "technician": {
+      "role": "Técnico de farmacia hospitalaria",
+      "area": "Supervisión del almacenamiento",
+      "quote": "“Las alertas automáticas y el historial de registros nos ahorrarían mucho tiempo y reducirían el estrés de los controles manuales en los turnos de noche.”"
+    },
+    "quality": {
+      "role": "Jefe de calidad",
+      "area": "Enfoque de cumplimiento",
+      "quote": "“Una plataforma con registros inmutables y reportes exportables facilitaría mucho las auditorías y reduciría nuestra exposición a observaciones regulatorias.”"
+    },
+    "goTo": "Ir al testimonio {n}"
+  },
+  "faq": {
+    "title": "Preguntas que suelen hacer primero los profesionales de salud.",
+    "q1": {
+      "question": "¿Qué es SafeLab?",
+      "answer": "SafeLab es una plataforma SaaS B2B de monitoreo ambiental automatizado, alertas preventivas y trazabilidad para laboratorios, hospitales y redes de farmacias."
+    },
+    "q2": {
+      "question": "¿Para quién está diseñada la solución?",
+      "answer": "Está diseñada para coordinadores de laboratorio, técnicos de farmacia, jefes de calidad e instituciones de salud responsables de inventario biológico sensible."
+    },
+    "q3": {
+      "question": "¿La plataforma ayuda con las auditorías y el cumplimiento?",
+      "answer": "Sí. SafeLab respalda los procesos de auditoría mediante reportes automatizados y registros históricos persistentes que mejoran la trazabilidad."
+    },
+    "q4": {
+      "question": "¿Esta sección se puede actualizar luego con evidencia real del producto?",
+      "answer": "Sí. La estructura está lista para capturas de pantalla, métricas de monitoreo, resultados de entrevistas, evidencia de cumplimiento y contenido de validación del producto."
+    }
+  },
+  "contact": {
+    "eyebrow": "CONTACTO",
+    "title": "Hablemos de una cadena de frío más segura.",
+    "email": "Correo electrónico",
+    "phone": "Teléfono",
+    "location": "Ubicación",
+    "locationValue": "Lima, Perú",
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "emailPlaceholder": "tu@correo.com",
+      "organization": "Organización",
+      "organizationPlaceholder": "Laboratorio, hospital o red de farmacias",
+      "interest": "Servicio de interés",
+      "interestDefault": "Elige una opción",
+      "interestLab": "Monitoreo de laboratorio",
+      "interestHospital": "Implementación en hospital o farmacia",
+      "interestDemo": "Demo del producto",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntanos tus necesidades, objetivos o preguntas.",
+      "submit": "Enviar mensaje"
+    }
+  },
+  "footer": {
+    "logoAlt": "Logotipo de SafeLab en el pie de página",
+    "description": "SafeLab es el sitio web de una plataforma de monitoreo inteligente de la cadena de frío enfocada en la seguridad operativa, la visibilidad en tiempo real y una logística de salud sin pérdidas.",
+    "sections": "Secciones",
+    "more": "Más",
+    "copyright": "© 2026 SafeLab by SafeLab. Todos los derechos reservados."
+  },
+  "sections": {
+    "benefits": "Beneficios",
+    "product": "Sobre el producto",
+    "team": "Sobre el equipo",
+    "testimonials": "Testimonios",
+    "faq": "Preguntas frecuentes"
+  }
+}

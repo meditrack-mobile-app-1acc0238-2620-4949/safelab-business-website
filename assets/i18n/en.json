@@ -1,0 +1,275 @@
+{
+  "meta": {
+    "title": "SafeLab | Smart Cold Chain Monitoring for Clinical Laboratories",
+    "description": "SafeLab provides automated environmental monitoring, real-time alerts and audit-ready reporting for clinical laboratories, hospitals and pharmacy networks."
+  },
+  "nav": {
+    "brandHome": "SafeLab home",
+    "logoAlt": "SafeLab shield logo",
+    "primary": "Primary navigation",
+    "home": "Home",
+    "benefits": "Benefits",
+    "services": "Services",
+    "plans": "Plans",
+    "product": "About Product",
+    "team": "About Team",
+    "testimonials": "Testimonials",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "languageSwitch": "Switch language (English / Spanish)",
+    "themeSwitch": "Theme switch visual button",
+    "login": "Login",
+    "signup": "Sign Up",
+    "openMenu": "Open navigation menu"
+  },
+  "hero": {
+    "eyebrow": "SMART COLD CHAIN MONITORING",
+    "title": {
+      "word1": "Protect",
+      "word2": "every",
+      "word3": "sample,",
+      "word4": "reactive",
+      "word5": "and",
+      "word6": "vaccine"
+    },
+    "description": "SafeLab helps laboratories, hospitals and pharmacy networks protect biological inventory through continuous environmental monitoring, predictive alerts and audit-ready records that reduce risk, waste and manual control tasks.",
+    "ctaDemo": "Request a demo",
+    "ctaExplore": "Explore platform",
+    "stats": {
+      "monitoring": "Continuous monitoring",
+      "waste": "Waste reduction goal",
+      "onboarding": "Target onboarding time"
+    },
+    "preview": "SafeLab dashboard preview",
+    "cards": {
+      "liveTag": "LIVE MONITORING",
+      "statusTitle": "Cold chain status",
+      "statusText": "Environmental data, equipment state and threshold deviations in one central view.",
+      "inventoryLabel": "Protected inventory",
+      "inventoryItems": "Reactives · Vaccines · Samples",
+      "wasteTag": "ZERO WASTE",
+      "alertsTitle": "Automated alerts",
+      "alertsText": "Get notified before thermal excursions cause irreversible degradation or compliance issues."
+    }
+  },
+  "benefits": {
+    "title": "Visible value for laboratories and healthcare operations.",
+    "description": "The platform is built around traceability, risk prevention and operational efficiency, helping healthcare teams replace manual control with continuous monitoring and reliable data.",
+    "safety": {
+      "title": "Clinical safety protection",
+      "text": "Protect critical materials by detecting temperature risks before they compromise diagnostic reliability or patient safety.",
+      "imageAlt": "Automated storage system protecting clinical materials"
+    },
+    "visibility": {
+      "title": "24/7 remote visibility",
+      "text": "Monitor storage conditions, equipment state and thermal deviations continuously from a centralized dashboard.",
+      "imageAlt": "Healthcare professionals reviewing monitoring data"
+    },
+    "response": {
+      "title": "Early incident response",
+      "text": "Configurable alerts help teams react before a cold chain failure turns into lost stock or regulatory exposure.",
+      "imageAlt": "Specialist reviewing operational monitoring data"
+    },
+    "documentation": {
+      "title": "Less manual documentation",
+      "text": "Reduce hours spent on paper logs and repetitive supervision so specialists can focus on higher-value clinical work.",
+      "imageAlt": "Healthcare professional using digital documentation"
+    },
+    "traceability": {
+      "title": "Audit-ready traceability",
+      "text": "Maintain historical, structured and exportable records that support inspections, audits and quality controls.",
+      "imageAlt": "Professional reviewing traceability and audit reports"
+    },
+    "saas": {
+      "title": "Scalable SaaS adoption",
+      "text": "Deploy a modern web platform that fits resource-constrained institutions without complex local infrastructure.",
+      "imageAlt": "Pharmacy professionals using a scalable digital workflow"
+    }
+  },
+  "services": {
+    "eyebrow": "SERVICES",
+    "title": "Solutions designed for clinical cold chain operations.",
+    "description": "SafeLab supports laboratories, hospitals and pharmacy networks with modular monitoring, alerting and reporting capabilities.",
+    "laboratories": {
+      "badge": "SEGMENT 01",
+      "title": "Clinical laboratories",
+      "imageAlt": "Clinical laboratory professional working with a microscope",
+      "item1": "Continuous environmental monitoring",
+      "item2": "Threshold-based alerts",
+      "item3": "Digital traceability records",
+      "item4": "Less manual temperature logging"
+    },
+    "hospitals": {
+      "badge": "SEGMENT 02",
+      "title": "Hospitals and clinical pharmacies",
+      "imageAlt": "Clinical pharmacy and hospital storage area",
+      "item1": "Multi-equipment centralized dashboard",
+      "item2": "Multi-location visibility",
+      "item3": "Audit-ready traceability support",
+      "item4": "Faster response to failures"
+    },
+    "platform": {
+      "badge": "CORE PLATFORM",
+      "title": "SafeLab monitoring platform",
+      "imageAlt": "SafeLab monitoring dashboard in use",
+      "item1": "Integrated sensor-based data flow",
+      "item2": "Audit-ready historical records",
+      "item3": "Guided onboarding experience",
+      "item4": "Scalable SaaS architecture"
+    }
+  },
+  "plans": {
+    "eyebrow": "PLANS",
+    "title": "Flexible plans for each healthcare organization.",
+    "perMonth": "/month",
+    "custom": "Custom",
+    "starter": {
+      "tag": "Starter",
+      "imageAlt": "Small clinical laboratory team for the Starter Lab plan",
+      "description": "For small laboratories that need reliable monitoring for critical storage units.",
+      "item1": "Up to 10 monitored devices",
+      "item3": "Monthly compliance reports",
+      "item4": "Email support",
+      "cta": "Choose Starter"
+    },
+    "professional": {
+      "tag": "Most popular",
+      "imageAlt": "Modern laboratory environment for the Professional plan",
+      "description": "For hospitals and pharmacy areas that require broader visibility and faster operational response.",
+      "item2": "Real-time dashboard",
+      "item3": "Multi-user access",
+      "item4": "Priority support",
+      "cta": "Choose Professional"
+    },
+    "enterprise": {
+      "tag": "Scale",
+      "imageAlt": "Large-scale laboratory operation for the Enterprise plan",
+      "description": "For networks that need larger deployments, advanced analytics and custom integrations.",
+      "item1": "Unlimited monitored devices",
+      "item2": "Advanced analytics",
+      "item3": "Regulatory export workflows",
+      "item4": "API and custom integration support",
+      "cta": "Talk to Sales"
+    }
+  },
+  "product": {
+    "title": "SafeLab is the digital infrastructure behind a safer clinical cold chain.",
+    "description": "SafeLab combines connected hardware, a centralized dashboard and an alert engine to replace intermittent manual supervision with continuous, predictive monitoring. The platform is designed to preserve biological inventory and support regulatory compliance.",
+    "check1": "Real-time environmental monitoring",
+    "check2": "Configurable preventive alerts",
+    "check3": "Automated PDF reporting",
+    "check4": "Immutable historical traceability",
+    "mockPlaceholder": "Insert SafeLab dashboard / monitoring view here"
+  },
+  "team": {
+    "title": "The startup behind SafeLab.",
+    "solve": {
+      "title": "What we solve",
+      "text": "We address a critical operational vulnerability: uncertainty and inefficiency in the storage of sensitive biological materials such as reactives, vaccines and samples."
+    },
+    "mission": {
+      "title": "Our mission",
+      "text": "Empower healthcare personnel with automated monitoring, early alerts and reliable records so they can focus on analysis and patient care instead of repetitive manual documentation."
+    },
+    "vision": {
+      "title": "Our vision",
+      "text": "Become the regional standard for intelligent biological inventory management, promoting zero-waste operations and pragmatic innovation in healthcare institutions."
+    },
+    "members": {
+      "giusephi": {
+        "photoAlt": "giusephi-profile-photo"
+      },
+      "victor": {
+        "photoAlt": "victor-profile-photo"
+      },
+      "braden": {
+        "photoAlt": "braden-profile-photo"
+      },
+      "valeria": {
+        "photoAlt": "valeria-profile-photo"
+      },
+      "oscar": {
+        "photoAlt": "oscar-profile-photo"
+      },
+      "descriptionPlaceholder": "(description)"
+    },
+    "summaryPlaceholder": "Insert team photo, startup culture or collaboration summary here."
+  },
+  "testimonials": {
+    "title": "Testimonials ready to be replaced with real validation interviews.",
+    "previous": "Previous testimonial",
+    "next": "Next testimonial",
+    "coordinator": {
+      "role": "Laboratory coordinator",
+      "area": "Clinical operations",
+      "quote": "“SafeLab would give us the visibility we need to detect a thermal deviation immediately instead of discovering it hours later in a paper log.”"
+    },
+    "technician": {
+      "role": "Hospital pharmacy technician",
+      "area": "Storage supervision",
+      "quote": "“Automated alerts and historical records would save us a lot of time and reduce the stress of manual checks during night shifts.”"
+    },
+    "quality": {
+      "role": "Quality manager",
+      "area": "Compliance perspective",
+      "quote": "“A platform with immutable records and exportable reports would make audits much easier and reduce our exposure to regulatory findings.”"
+    },
+    "goTo": "Go to testimonial {n}"
+  },
+  "faq": {
+    "title": "Questions healthcare visitors may ask first.",
+    "q1": {
+      "question": "What is SafeLab?",
+      "answer": "SafeLab is a B2B SaaS platform for automated environmental monitoring, preventive alerts and traceability in laboratories, hospitals and pharmacy networks."
+    },
+    "q2": {
+      "question": "Who is the solution designed for?",
+      "answer": "It is designed for laboratory coordinators, pharmacy technicians, quality managers and healthcare institutions responsible for sensitive biological inventory."
+    },
+    "q3": {
+      "question": "Does the platform help with audits and compliance?",
+      "answer": "Yes. SafeLab is intended to support audit processes through automated reporting and persistent historical records that improve traceability."
+    },
+    "q4": {
+      "question": "Can this section be updated later with real product evidence?",
+      "answer": "Yes. The structure is ready for screenshots, monitoring metrics, interview results, compliance evidence and product validation content."
+    }
+  },
+  "contact": {
+    "eyebrow": "CONTACT",
+    "title": "Let’s talk about safer cold chain operations.",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "locationValue": "Lima, Peru",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "your@email.com",
+      "organization": "Organization",
+      "organizationPlaceholder": "Laboratory, hospital or pharmacy network",
+      "interest": "Service interest",
+      "interestDefault": "Choose an option",
+      "interestLab": "Laboratory monitoring",
+      "interestHospital": "Hospital / pharmacy deployment",
+      "interestDemo": "Product demo",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your needs, goals or questions.",
+      "submit": "Send message"
+    }
+  },
+  "footer": {
+    "logoAlt": "SafeLab logo in footer",
+    "description": "SafeLab is the business website for a smart cold chain monitoring platform focused on operational safety, real-time visibility and zero-waste healthcare logistics.",
+    "sections": "Sections",
+    "more": "More",
+    "copyright": "© 2026 SafeLab by SafeLab. All rights reserved."
+  },
+  "sections": {
+    "benefits": "Benefits",
+    "product": "About Product",
+    "team": "About Team",
+    "testimonials": "Testimonials",
+    "faq": "FAQ"
+  }
+}
