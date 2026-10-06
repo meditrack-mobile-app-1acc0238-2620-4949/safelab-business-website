@@ -48,7 +48,7 @@
     try {
       localStorage.setItem(STORAGE_KEY, lang);
     } catch (error) {
-      // Storage can be blocked (private mode); the site still works.
+      // Storage can be blocked (private mode); the site still works
     }
   }
 
