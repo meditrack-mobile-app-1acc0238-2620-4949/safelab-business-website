@@ -597,23 +597,6 @@ body.dark .plan-card--popular {
   border: 1px solid rgba(97, 135, 175, 0.16);
   font-weight: 600;
 }
-.mock-screen { padding: 22px; border-radius: 24px; }
-.mock-screen__top {
-  height: 6px;
-  width: 120px;
-  border-radius: 999px;
-  background: rgba(27, 167, 177, 0.22);
-}
-.mock-screen__body {
-  min-height: 440px;
-  margin-top: 18px;
-  border-radius: 24px;
-  border: 1px dashed rgba(111, 146, 184, 0.45);
-  display: grid;
-  place-items: center;
-  color: var(--text-soft);
-  background: linear-gradient(180deg, rgba(11, 58, 120, 0.08), rgba(27, 167, 177, 0.10));
-}
 
 /* Team */
 /* Team */
@@ -1139,3 +1122,69 @@ textarea { resize: vertical; }
 
 .hero-title__line--mixed{display:inline-flex !important; align-items:baseline; gap:0.16em; white-space:nowrap;}
 .hero-title__child{margin-top:-0.02em;}
+
+/* ===== About Product & Team (feature/tb1-product-team) ===== */
+
+/* Product mockup: CSS phone frames with app screenshots */
+.phone-stage {
+  --phone-front-w: 270px;
+  --phone-back-w: 204px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 640px;
+  background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 64%);
+}
+
+.phone {
+  position: relative;
+  padding: 9px;
+  border-radius: 38px;
+  background: var(--primary-dark);
+  box-shadow: var(--shadow), inset 0 0 0 2px rgba(255, 255, 255, 0.14);
+}
+
+.phone::before {
+  content: "";
+  position: absolute;
+  top: 19px;
+  left: 50%;
+  z-index: 2;
+  width: 64px;
+  height: 16px;
+  border-radius: 999px;
+  background: var(--primary-dark);
+  transform: translateX(-50%);
+}
+
+.phone img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 690 / 1536;
+  border-radius: 29px;
+  object-fit: cover;
+  background: var(--surface-strong);
+}
+
+.phone--front {
+  z-index: 2;
+  width: var(--phone-front-w);
+}
+
+.phone--back {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  width: var(--phone-back-w);
+}
+
+.phone--left { left: 3%; transform: translateY(-50%) rotate(-6deg); }
+.phone--right { right: 3%; transform: translateY(-50%) rotate(6deg); }
+
+@media (max-width: 760px) {
+  .phone-stage { --phone-front-w: 244px; min-height: 560px; }
+  .phone--back { display: none; }
+}
+
+/* ===== end About Product & Team ===== */
