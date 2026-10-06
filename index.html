@@ -393,40 +393,49 @@
     </section>
     </section>
 
-    <!-- Testimonials keep the imported carousel, but with a more blue brand-aligned background -->
+    <!-- Engagement section: testimonials, FAQ, contact form and footer -->
+    <!-- Testimonials keep the imported carousel, with content based on the needfinding interviews -->
     <section class="section testimonials testimonials--brand" id="testimonials">
       <div class="container section-head reveal-up testimonials-head">
         <div>
           <span class="section-kicker section-kicker--light">Testimonials</span>
-          <h2>Testimonials ready to be replaced with real validation interviews.</h2>
+          <h2>What laboratory and pharmacy teams expect from SafeLab.</h2>
         </div>
       </div>
 
-      <div class="container testimonial-shell reveal-up">
+      <div class="container testimonial-shell reveal-up" aria-roledescription="carousel" aria-label="SafeLab testimonials">
         <button class="carousel-arrow carousel-arrow--left" type="button" aria-label="Previous testimonial">‹</button>
-        <div class="testimonial-track" data-carousel-track>
+        <div class="testimonial-track" data-carousel-track aria-live="polite">
           <article class="testimonial-card is-active">
-            <div class="testimonial-card__avatar">PF</div>
+            <div class="testimonial-card__avatar">LC</div>
             <h3>Laboratory coordinator</h3>
-            <span>Clinical operations</span>
+            <span>Hospital clinical laboratory</span>
             <p>
-              “SafeLab would give us the visibility we need to detect a thermal deviation immediately instead of discovering it hours later in a paper log.”
+              “We check fridges and freezers by hand three times per shift. Receiving an alert on the phone when a door stays open at night would protect the reagents we lose today.”
             </p>
           </article>
           <article class="testimonial-card">
-            <div class="testimonial-card__avatar">DR</div>
-            <h3>Hospital pharmacy technician</h3>
-            <span>Storage supervision</span>
-            <p>
-              “Automated alerts and historical records would save us a lot of time and reduce the stress of manual checks during night shifts.”
-            </p>
-          </article>
-          <article class="testimonial-card">
-            <div class="testimonial-card__avatar">CO</div>
+            <div class="testimonial-card__avatar">QM</div>
             <h3>Quality manager</h3>
-            <span>Compliance perspective</span>
+            <span>Pharmaceutical company</span>
             <p>
-              “A platform with immutable records and exportable reports would make audits much easier and reduce our exposure to regulatory findings.”
+              “Every week we download dataloggers and consolidate Excel files for audits. An immutable record with exportable reports would save us hours and avoid regulatory findings.”
+            </p>
+          </article>
+          <article class="testimonial-card">
+            <div class="testimonial-card__avatar">PT</div>
+            <h3>Pharmacy technician</h3>
+            <span>Hospital pharmacy</span>
+            <p>
+              “Problems are usually discovered when the damage is already done. Seeing temperature and humidity in real time would let us act before a batch is lost.”
+            </p>
+          </article>
+          <article class="testimonial-card">
+            <div class="testimonial-card__avatar">LA</div>
+            <h3>Logistics assistant</h3>
+            <span>Pharmaceutical warehouse</span>
+            <p>
+              “I would like to see every storage zone from one place and get a warning when a value is getting close to the limit, not only when it is already exceeded.”
             </p>
           </article>
         </div>
@@ -457,15 +466,21 @@
           </p>
         </details>
         <details>
-          <summary>Does the platform help with audits and compliance?</summary>
+          <summary>How does SafeLab notify my team about a deviation?</summary>
           <p>
-            Yes. SafeLab is intended to support audit processes through automated reporting and persistent historical records that improve traceability.
+            When a reading leaves the allowed range, SafeLab generates an alert in the mobile application with the equipment, the recorded value and the time, so the responsible staff can confirm and attend it.
           </p>
         </details>
         <details>
-          <summary>Can this section be updated later with real product evidence?</summary>
+          <summary>Can I configure the limits for each equipment?</summary>
           <p>
-            Yes. The structure is ready for screenshots, monitoring metrics, interview results, compliance evidence and product validation content.
+            Yes. Each monitored equipment can have its own temperature and humidity limits, and alerts are generated when those limits are exceeded.
+          </p>
+        </details>
+        <details>
+          <summary>Does the platform help with audits and compliance?</summary>
+          <p>
+            Yes. SafeLab is intended to support audit processes through automated reporting and persistent historical records that improve traceability.
           </p>
         </details>
       </div>
@@ -477,41 +492,47 @@
           <span class="eyebrow">CONTACT</span>
           <h2>Let’s talk about safer cold chain operations.</h2>
           <div class="contact-cards">
-            <div class="contact-card"><strong>Email</strong><span>con@safelab.io</span></div>
+            <div class="contact-card"><strong>Email</strong><span>contact@safelab.io</span></div>
             <div class="contact-card"><strong>Phone</strong><span>+51 999 999 999</span></div>
             <div class="contact-card"><strong>Location</strong><span>Lima, Peru</span></div>
           </div>
         </div>
 
-        <form class="contact-form reveal-up delay-1">
+        <form class="contact-form reveal-up delay-1" novalidate>
           <div class="input-row">
-            <label>
+            <label for="contact-name">
               <span>Name</span>
-              <input type="text" placeholder="Your name" />
+              <input id="contact-name" name="name" type="text" placeholder="Your name" required aria-describedby="contact-name-error" />
+              <small class="field-error" id="contact-name-error"></small>
             </label>
-            <label>
+            <label for="contact-email">
               <span>Email</span>
-              <input type="email" placeholder="your@email.com" />
+              <input id="contact-email" name="email" type="email" placeholder="your@email.com" required aria-describedby="contact-email-error" />
+              <small class="field-error" id="contact-email-error"></small>
             </label>
           </div>
-          <label>
+          <label for="contact-organization">
             <span>Organization</span>
-            <input type="text" placeholder="Laboratory, hospital or pharmacy network" />
+            <input id="contact-organization" name="organization" type="text" placeholder="Laboratory, hospital or pharmacy network" required aria-describedby="contact-organization-error" />
+            <small class="field-error" id="contact-organization-error"></small>
           </label>
-          <label>
+          <label for="contact-interest">
             <span>Service interest</span>
-            <select>
-              <option>Choose an option</option>
-              <option>Laboratory monitoring</option>
-              <option>Hospital / pharmacy deployment</option>
-              <option>Product demo</option>
+            <select id="contact-interest" name="interest" required aria-describedby="contact-interest-error">
+              <option value="">Choose an option</option>
+              <option value="laboratory">Laboratory monitoring</option>
+              <option value="hospital">Hospital / pharmacy deployment</option>
+              <option value="demo">Product demo</option>
             </select>
+            <small class="field-error" id="contact-interest-error"></small>
           </label>
-          <label>
+          <label for="contact-message">
             <span>Message</span>
-            <textarea rows="5" placeholder="Tell us about your needs, goals or questions."></textarea>
+            <textarea id="contact-message" name="message" rows="5" placeholder="Tell us about your needs, goals or questions." required aria-describedby="contact-message-error"></textarea>
+            <small class="field-error" id="contact-message-error"></small>
           </label>
           <button class="primary-btn submit-btn" type="submit">Send message</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>
@@ -547,9 +568,17 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li><a href="mailto:contact@safelab.io">contact@safelab.io</a></li>
+          <li><a href="tel:+51999999999">+51 999 999 999</a></li>
+          <li>Lima, Peru</li>
+        </ul>
+      </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 SafeLab by SafeLab. All rights reserved.</span>
+      <span>© 2026 SafeLab by MediTrack. All rights reserved.</span>
     </div>
   </footer>
 

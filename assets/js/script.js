@@ -84,7 +84,9 @@ function buildDots() {
 
 function updateCarousel() {
   cards.forEach((card, index) => {
-    card.classList.toggle('is-active', index === currentIndex);
+    const isActive = index === currentIndex;
+    card.classList.toggle('is-active', isActive);
+    card.setAttribute('aria-hidden', String(!isActive));
   });
 
   const dots = dotsContainer ? dotsContainer.querySelectorAll('button') : [];
@@ -134,22 +136,108 @@ if (cards.length) {
 
   track?.addEventListener('mouseenter', () => clearInterval(carouselInterval));
   track?.addEventListener('mouseleave', startAutoPlay);
-}
 
-// ---------------------------------------------------------
-// 5) Form behavior placeholder
-// Small UX safeguard so the placeholder form does not refresh
-// the page while still looking functional in the prototype.
-// ---------------------------------------------------------
-const contactForm = document.querySelector('.contact-form');
-if (contactForm) {
-  contactForm.addEventListener('submit', (event) => {
-    event.preventDefault();
+  // Keyboard support: left / right arrows when the carousel has focus
+  const testimonialShell = document.querySelector('.testimonials .testimonial-shell');
+  testimonialShell?.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') {
+      prevSlide();
+      resetAutoPlay();
+    } else if (event.key === 'ArrowRight') {
+      nextSlide();
+      resetAutoPlay();
+    }
   });
 }
 
 // ---------------------------------------------------------
-// 5) Sticky-topbar anchor correction
+// 5) FAQ accordion
+// Keeps only one question open at a time
+// Affects:
+// - .faq__list details
+// ---------------------------------------------------------
+const faqItems = document.querySelectorAll('.faq__list details');
+
+faqItems.forEach((item) => {
+  item.addEventListener('toggle', () => {
+    if (!item.open) return;
+    faqItems.forEach((other) => {
+      if (other !== item) other.open = false;
+    });
+  });
+});
+
+// ---------------------------------------------------------
+// 6) Contact form validation
+// Validates the required fields and shows visual feedback
+// without refreshing the page (no backend connected yet).
+// Affects:
+// - .contact-form fields, .field-error and .form-status
+// ---------------------------------------------------------
+const contactForm = document.querySelector('.contact-form');
+
+const contactRules = {
+  name: (value) => (value.length >= 2 ? '' : 'Please enter your name.'),
+  email: (value) =>
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) ? '' : 'Please enter a valid email address.',
+  organization: (value) => (value.length >= 2 ? '' : 'Please enter your organization.'),
+  interest: (value) => (value ? '' : 'Please choose a service.'),
+  message: (value) => (value.length >= 10 ? '' : 'Please write at least 10 characters.')
+};
+
+function validateField(field) {
+  const rule = contactRules[field.name];
+  if (!rule) return true;
+
+  const message = rule(field.value.trim());
+  const errorElement = document.getElementById(`${field.id}-error`);
+
+  field.classList.toggle('is-invalid', Boolean(message));
+  field.setAttribute('aria-invalid', String(Boolean(message)));
+  if (errorElement) errorElement.textContent = message;
+
+  return !message;
+}
+
+if (contactForm) {
+  const fields = Array.from(contactForm.querySelectorAll('input, select, textarea'));
+  const formStatus = contactForm.querySelector('.form-status');
+
+  fields.forEach((field) => {
+    field.addEventListener('blur', () => validateField(field));
+    field.addEventListener('input', () => {
+      if (field.classList.contains('is-invalid')) validateField(field);
+    });
+  });
+
+  contactForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const results = fields.map((field) => validateField(field));
+    const isValid = results.every(Boolean);
+
+    if (formStatus) {
+      formStatus.textContent = isValid
+        ? 'Thank you! Your message was sent. Our team will contact you soon.'
+        : 'Please review the highlighted fields.';
+      formStatus.classList.toggle('is-success', isValid);
+      formStatus.classList.toggle('is-error', !isValid);
+    }
+
+    if (isValid) {
+      contactForm.reset();
+      fields.forEach((field) => {
+        field.classList.remove('is-invalid');
+        field.removeAttribute('aria-invalid');
+      });
+    } else {
+      fields.find((field) => field.classList.contains('is-invalid'))?.focus();
+    }
+  });
+}
+
+// ---------------------------------------------------------
+// 7) Sticky-topbar anchor correction
 // Ensures each topbar link lands with the section title visible,
 // matching the earlier reference behavior.
 // ---------------------------------------------------------
