@@ -638,22 +638,6 @@ body.dark .plan-card--popular {
 .team-card {
   text-align: center;
 }
-
-.placeholder-block {
-  margin-top: 24px;
-  padding: 32px;
-  border-radius: 26px;
-  border: 1px dashed rgba(23,55,96,0.22);
-  color: var(--text-soft);
-  background: rgba(230, 246, 247, 0.52);
-}
-
-.placeholder-block.large {
-  min-height: 180px;
-  display: grid;
-  place-items: center;
-  text-align: center;
-}
 /* Testimonials */
 .testimonials--brand {
   background: linear-gradient(180deg, #0b3a78 0%, #124b90 44%, #1ba7b1 100%);
@@ -1284,6 +1268,78 @@ textarea { resize: vertical; }
 
 @media (max-width: 479px) {
   .team-grid { grid-template-columns: 1fr; }
+}
+
+/* Team pillars: what we solve, mission and vision */
+.team-pillar__icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 18px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--primary-dark) 16%, transparent), color-mix(in srgb, var(--primary) 20%, transparent));
+  color: var(--primary-dark);
+}
+
+/* Team summary: closing message and key facts */
+.team-summary {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 32px;
+  align-items: center;
+  margin-top: 26px;
+  padding: 40px;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, var(--primary-dark), color-mix(in srgb, var(--primary-dark) 62%, var(--primary)));
+  box-shadow: var(--shadow);
+}
+
+.team-summary__message {
+  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--surface-strong);
+}
+
+.team-summary__facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.team-summary__facts li {
+  padding: 16px 18px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.team-summary__facts strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--surface-strong);
+}
+
+.team-summary__facts span {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+@media (max-width: 1080px) {
+  .team-summary { grid-template-columns: 1fr; padding: 32px 28px; }
+}
+
+@media (max-width: 479px) {
+  .team-summary__facts { grid-template-columns: 1fr; }
 }
 
 /* ===== end About Product & Team ===== */
