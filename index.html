@@ -2,12 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SafeLab | Smart Cold Chain Monitoring for Clinical Laboratories</title>
-  <meta name="description" content="SafeLab provides automated environmental monitoring, real-time alerts and audit-ready reporting for clinical laboratories, hospitals and pharmacy networks." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+  <title>SafeLab | Real-Time Cold Chain Monitoring</title>
+  <meta name="description" content="SafeLab helps clinical laboratories, hospitals and pharmacy networks monitor cold-chain conditions, detect risks early and maintain audit-ready traceability." />
+  <meta name="author" content="SafeLab" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0b3a78" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SafeLab | Real-Time Cold Chain Monitoring" />
+  <meta property="og:description" content="Continuous monitoring, operational alerts and traceability for critical laboratory and healthcare cold-chain assets." />
+
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/images/logos/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/images/logos/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/styles/styles.css" />
 </head>
 <body>
@@ -18,9 +30,8 @@
         <span class="brand-name">SafeLab</span>
       </a>
 
-      <!-- TOPBAR ORDER updated according to correction sketch -->
       <nav class="nav-menu" aria-label="Primary navigation">
-        <a href="#home">Home</a>
+        <a href="#home" aria-current="page">Home</a>
         <a href="#benefits">Benefits</a>
         <a href="#services">Services</a>
         <a href="#plans">Plans</a>
@@ -38,12 +49,18 @@
         <a href="https://safelab-frontend.vercel.app/" class="primary-btn">Sign Up</a>
       </div>
 
-      <button class="mobile-toggle" type="button" aria-label="Open navigation menu">
+      <button
+        class="mobile-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-panel"
+      >
         <span></span><span></span><span></span>
       </button>
     </div>
 
-    <div class="mobile-panel">
+    <div class="mobile-panel" id="mobile-panel" aria-label="Mobile navigation">
       <a href="#home">Home</a>
       <a href="#benefits">Benefits</a>
       <a href="#services">Services</a>
@@ -68,67 +85,55 @@
         <div class="hero-copy reveal-up">
           <span class="eyebrow">SMART COLD CHAIN MONITORING</span>
 
-          <!-- HERO TITLE updated with multi-color gradient treatment inspired by the reference image -->
           <h1 class="hero-title">
-            <span class="hero-title__dark">Protect</span>
-            <span class="hero-title__dark">every</span>
-            <span class="hero-title__cool">sample,</span>
-            <span class="hero-title__line hero-title__line--mixed">
-              <span class="hero-title__warm">reactive</span>
-              <span class="hero-title__dark hero-title__for">and</span>
-            </span>
-            <span class="hero-title__dark hero-title__child">vaccine</span>
+            Protect every
+            <span class="hero-title__accent">sample, reagent and vaccine.</span>
           </h1>
 
-          <p>
-            SafeLab helps laboratories, hospitals and pharmacy networks protect biological inventory through continuous environmental monitoring,
-            predictive alerts and audit-ready records that reduce risk, waste and manual control tasks.
+          <p class="hero-description">
+            SafeLab centralizes cold-chain monitoring for laboratories, hospitals and pharmacy networks, helping teams detect environmental risks early and keep critical assets traceable from one operational view.
           </p>
-          <div class="hero-actions">
-            <a href="#contact" class="primary-btn large">Request a demo</a>
-            <a href="#services" class="secondary-btn large">Explore platform</a>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a href="#services" class="primary-btn large">Explore platform</a>
+            <a href="#contact" class="secondary-btn large">Request a demo</a>
           </div>
-          <div class="stats-grid">
+          <div class="stats-grid" aria-label="SafeLab platform highlights">
             <article class="stat-card">
               <strong>24/7</strong>
-              <span>Continuous monitoring</span>
+              <span>Continuous environmental monitoring</span>
             </article>
             <article class="stat-card">
-              <strong>95%</strong>
-              <span>Waste reduction goal</span>
+              <strong>8</strong>
+              <span>Core operational modules</span>
             </article>
             <article class="stat-card">
-              <strong>2h</strong>
-              <span>Target onboarding time</span>
+              <strong>3</strong>
+              <span>Critical asset categories protected</span>
             </article>
           </div>
         </div>
 
         <div class="hero-visual reveal-up delay-1" aria-label="SafeLab dashboard preview">
           <div class="device-frame">
-            <!-- CARD 1 | moved higher and more to the left + floating animation -->
             <div class="device-card top-card float-card float-card--a">
               <span class="tag">LIVE MONITORING</span>
-              <h3>Cold chain status</h3>
-              <p>Environmental data, equipment state and threshold deviations in one central view.</p>
+              <h3>Cold-chain overview</h3>
+              <p>Temperature, humidity, equipment status and threshold deviations in one operational view.</p>
             </div>
 
-            <!-- VISUAL CORE | real transparent shield logo inserted here -->
             <div class="orbit-panel logo-drift">
-              <img src="assets/images/logos/safelab-shield.png" alt="SafeLab shield logo" class="hero-logo-img">
+              <img src="assets/images/logos/safelab-shield.png" alt="SafeLab cold-chain monitoring shield" class="hero-logo-img" />
             </div>
 
-            <!-- CARD 2 | also animated softly -->
             <div class="mini-card left-mini float-card float-card--b">
               <span>Protected inventory</span>
-              <strong>Reactives · Vaccines · Samples</strong>
+              <strong>Samples · Reagents · Vaccines</strong>
             </div>
 
-            <!-- CARD 3 | moved closer to lower-right corner + floating animation -->
             <div class="mini-card right-mini float-card float-card--c">
-              <span class="tag warm">ZERO WASTE</span>
-              <h4>Automated alerts</h4>
-              <p>Get notified before thermal excursions cause irreversible degradation or compliance issues.</p>
+              <span class="tag warm">EARLY ALERTS</span>
+              <h4>Respond before conditions escalate</h4>
+              <p>Surface critical deviations quickly so teams can act before inventory or compliance is affected.</p>
             </div>
           </div>
         </div>
