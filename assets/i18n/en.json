@@ -228,6 +228,11 @@
       "work": "Way of working",
       "version": "Version control",
       "scope": "Product scope"
+    },
+    "video": {
+      "title": "Meet the team",
+      "description": "Get to know the people behind SafeLab and the role each member plays in the project.",
+      "frameTitle": "SafeLab About the Team video"
     }
   },
   "testimonials": {
