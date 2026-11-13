@@ -6,5 +6,5 @@ window.SafeLabSiteConfig = Object.freeze({
   githubReleaseRepository: 'meditrack-mobile-app-1acc0238-2620-4949/safelab-mobile-app',
   githubReleaseApkName: 'SafeLab.apk',
   validationVideoId: 'mDeXDb51usI',
-  teamVideoId: 'hP9a5WIMhLk'
+  teamVideoId: 'hP9a5WlMhLk'
 });
