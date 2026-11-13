@@ -228,6 +228,11 @@
       "work": "Forma de trabajo",
       "version": "Control de versiones",
       "scope": "Alcance del producto"
+    },
+    "video": {
+      "title": "Conoce al equipo",
+      "description": "Conoce a las personas detrás de SafeLab y el rol que cumple cada integrante en el proyecto.",
+      "frameTitle": "Video About the Team de SafeLab"
     }
   },
   "testimonials": {
