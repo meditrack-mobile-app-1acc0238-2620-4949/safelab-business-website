@@ -2933,3 +2933,274 @@ body.dark .download-dialog__close {
     transition: none;
   }
 }
+
+/* =========================================================
+   AV2 content + accessibility: one verified subscription tier
+   ========================================================= */
+.plans-heading p {
+  max-width: 62ch;
+  margin: 14px auto 0;
+}
+.plans-grid--business {
+  display: block;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.plan-card--business {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+  background: var(--surface-strong);
+  border: 1px solid rgba(27, 167, 177, .25);
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+}
+.business-plan__visual {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 500px;
+  background: #0b3a78;
+}
+.business-plan__visual::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7, 25, 48, .08), rgba(5, 28, 54, .88));
+  z-index: -1;
+}
+.business-plan__image {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.business-plan__visual-caption {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  display: grid;
+  justify-items: start;
+  gap: 12px;
+}
+.business-plan__visual-caption .plan-tag {
+  margin: 0;
+  padding: 6px 11px;
+  border-radius: 999px;
+  background: rgba(158, 233, 239, .2);
+  color: #e6faff;
+  border: 1px solid rgba(202, 244, 255, .32);
+}
+.business-plan__visual-caption strong {
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  color: #fff;
+  line-height: 1.12;
+}
+.business-plan__visual-caption p {
+  color: #eaf5ff;
+  font-size: .95rem;
+  line-height: 1.65;
+}
+.business-plan__content {
+  min-width: 0;
+  padding: clamp(26px, 4vw, 45px);
+  display: grid;
+  align-content: center;
+  gap: 21px;
+}
+.business-plan__price-group { text-align: left; }
+.business-plan__overline {
+  color: #087884;
+  letter-spacing: .13em;
+  font-size: .8rem;
+  font-weight: 800;
+}
+.business-plan__content .plan-price {
+  margin: 10px 0 6px;
+  text-align: left;
+  font-size: clamp(2.8rem, 5vw, 3.9rem);
+}
+.business-plan__tax { font-size: .81rem; line-height: 1.45; }
+.business-plan__seats {
+  margin: 0;
+  padding: 18px;
+  list-style: none;
+  display: grid;
+  gap: 14px;
+  border: 1px solid var(--surface-border);
+  border-radius: 18px;
+  background: rgba(27, 167, 177, .065);
+}
+.business-plan__seats li {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  color: var(--text);
+  font-size: .94rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.business-plan__check {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: #0d888e;
+  font-size: .9rem;
+}
+.business-plan__features h4 {
+  color: var(--title);
+  margin: 0 0 12px;
+  font-size: .96rem;
+}
+.business-plan__features ul {
+  display: grid;
+  gap: 8px;
+  padding-left: 20px;
+  margin: 0;
+  font-size: .88rem;
+  line-height: 1.5;
+  color: var(--text-soft);
+}
+.business-plan__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.business-plan__actions a {
+  min-height: 48px;
+  padding: 13px 20px;
+  text-align: center;
+  font-weight: 800;
+}
+@media(max-width:760px) {
+  .plan-card--business { grid-template-columns: 1fr; }
+  .business-plan__visual { min-height: 250px; }
+  .business-plan__visual-caption { left: 22px; right: 22px; bottom: 20px; }
+  .business-plan__content { padding: 25px 20px 28px; }
+  .business-plan__actions { display:grid; grid-template-columns:1fr; }
+}
+
+/* Floating Android CTA: same existing download dialog, no surprise popups. */
+.download-fab {
+  position: fixed;
+  z-index: 850;
+  right: max(22px, env(safe-area-inset-right));
+  bottom: max(22px, env(safe-area-inset-bottom));
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 13px 19px;
+  border-radius: 100px;
+  border: 1px solid rgba(219, 255, 255, .36);
+  color: #fff;
+  background: linear-gradient(125deg, #148f9b, #0c4a87);
+  box-shadow: 0 12px 32px rgba(9, 57, 98, .26), 0 0 0 5px rgba(34, 199, 200, .10);
+  font-size: .89rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+.download-fab svg { flex: 0 0 auto; }
+.download-fab:hover { transform: translateY(-3px); box-shadow: 0 18px 36px rgba(9, 57, 98, .38), 0 0 0 6px rgba(34, 199, 200, .13); }
+.download-fab__arrow { font-size: 1.15rem; }
+@media(max-width:760px) {
+  .download-fab {
+    right: max(14px, env(safe-area-inset-right));
+    bottom: max(14px, env(safe-area-inset-bottom));
+    width: 57px;
+    height: 57px;
+    padding: 0;
+    border-radius: 50%;
+  }
+  .download-fab__label, .download-fab__arrow { display: none; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .download-fab { transition: none; }
+}
+
+/* =========================================================
+   AV2 dark-mode contrast corrections (scoped to dark only)
+   ========================================================= */
+body.dark .hero-title__dark { color: #f0f7ff; }
+body.dark .hero-title__accent {
+  background: linear-gradient(90deg, #edf7ff 0%, #6de5e1 51%, #27ced2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+body.dark .eyebrow,
+body.dark .section-kicker:not(.section-kicker--light) {
+  color: #b4edfa;
+  background: rgba(32, 155, 189, .17);
+  border: 1px solid rgba(106, 213, 240, .22);
+}
+body.dark .section-kicker--light {
+  color: #f1faff;
+  background: rgba(255, 255, 255, .16);
+}
+body.dark .tag,
+body.dark .tag.warm,
+body.dark .card-badge,
+body.dark .plan-tag,
+body.dark .team-role,
+body.dark .team-pillar__icon {
+  color: #91e7ec;
+}
+body.dark .services-grid .card-badge { color: #9de9ef; }
+body.dark .team-role {
+  background: rgba(48, 192, 199, .14);
+  border: 1px solid rgba(48, 192, 199, .20);
+}
+body.dark .team-summary {
+  background: linear-gradient(135deg, #174b81, #0c5672);
+  border: 1px solid rgba(120, 215, 236, .2);
+}
+body.dark .team-summary__message,
+body.dark .team-summary__facts strong { color: #f5fbff; }
+body.dark .team-summary__facts span { color: #dfecf7; }
+body.dark .team-summary__facts li {
+  background: rgba(6, 25, 50, .33);
+  border-color: rgba(193, 229, 255, .18);
+}
+body.dark .footer {
+  background: linear-gradient(180deg, #0e2038 0%, #091626 100%);
+  border-top: 1px solid rgba(150, 212, 236, .20);
+}
+body.dark .footer .brand-name,
+body.dark .footer h4 { color: #eff8ff; }
+body.dark .footer p,
+body.dark .footer-contact li,
+body.dark .footer .footer-bottom { color: #c4d8e8; }
+body.dark .footer a { color: #c1d8ee; }
+body.dark .footer a:hover,
+body.dark .footer a:focus-visible { color: #80f4ef; }
+body.dark .footer-bottom { border-top-color: rgba(196, 220, 239, .18); }
+body.dark .top-card,
+body.dark .mini-card { border-color: rgba(181, 218, 250, .22); }
+body.dark input::placeholder,
+body.dark textarea::placeholder { color: #b1c4da; opacity: 1; }
+body.dark .field-error,
+body.dark .form-status.is-error { color: #ff9fa2; }
+body.dark .form-status.is-success { color: #8df5d3; }
+body.dark .business-plan__overline { color: #9de9ef; }
+body.dark .business-plan__seats { background: rgba(31, 183, 183, .09); }
+body.dark .business-plan__check { background: #118e96; }
+body.dark .business-plan__visual-caption .plan-tag { color: #e6faff; }
+
+/* Keep the existing download dialog above the sticky navigation. */
+.download-backdrop { z-index: 1200; }
+body.dark .footer-brand .brand-logo {
+  filter: drop-shadow(0 0 9px rgba(96, 225, 227, .22));
+}

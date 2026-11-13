@@ -51,7 +51,7 @@
         <button aria-label="Switch light and dark theme" class="icon-chip" data-i18n-aria-label="nav.themeSwitch"
           data-theme-switch="" type="button">☼</button>
         <a class="ghost-btn" data-auth-link="login" data-i18n="nav.login"
-          href="https://safelab-frontend.onrender.com/">Login</a>
+          href="https://safelab-frontend.onrender.com/identityaccess/login">Login</a>
         <a class="primary-btn" data-auth-link="signup" data-i18n="nav.signup"
           href="https://safelab-frontend.onrender.com/identityaccess/register">Sign Up</a>
       </div>
@@ -77,7 +77,7 @@
         <button aria-label="Switch light and dark theme" class="icon-chip" data-i18n-aria-label="nav.themeSwitch"
           data-theme-switch="" type="button">☼</button>
         <a class="ghost-btn" data-auth-link="login" data-i18n="nav.login"
-          href="https://safelab-frontend.onrender.com/">Login</a>
+          href="https://safelab-frontend.onrender.com/identityaccess/login">Login</a>
         <a class="primary-btn" data-auth-link="signup" data-i18n="nav.signup"
           href="https://safelab-frontend.onrender.com/identityaccess/register">Sign Up</a>
       </div>
@@ -104,12 +104,12 @@
               <span data-i18n="hero.stats.monitoring">Continuous environmental monitoring</span>
             </article>
             <article class="stat-card">
-              <strong>8</strong>
+              <strong>12</strong>
               <span data-i18n="hero.stats.modules">Core operational modules</span>
             </article>
             <article class="stat-card">
               <strong>3</strong>
-              <span data-i18n="hero.stats.assets">Critical asset categories protected</span>
+              <span data-i18n="hero.stats.assets">Types of sensitive materials monitored</span>
             </article>
           </div>
         </div>
@@ -148,8 +148,7 @@
           <h2 data-i18n="benefits.title">Visible value for laboratories and healthcare operations.</h2>
         </div>
         <p data-i18n="benefits.description">
-          The platform is built around traceability, risk prevention and operational efficiency, helping healthcare
-          teams replace manual control with continuous monitoring and reliable data.
+          SafeLab brings together environmental monitoring, organized records and operational alerts to help clinical teams supervise sensitive storage more effectively.
         </p>
       </div>
       <div class="container benefits-grid benefits-grid--compact">
@@ -157,43 +156,37 @@
           <img alt="Automated storage system protecting clinical materials" class="benefit-card__image"
             src="assets/images/benefits/clinical-safety-protection.jpg" />
           <h3 data-i18n="benefits.safety.title">Clinical safety protection</h3>
-          <p data-i18n="benefits.safety.text">Protect critical materials by detecting temperature risks before they
-            compromise diagnostic reliability or patient safety.</p>
+          <p data-i18n="benefits.safety.text">Detect temperature and humidity deviations in critical storage equipment to help protect sensitive samples, reagents and medicines.</p>
         </article>
         <article class="benefit-card reveal-up delay-1">
           <img alt="Healthcare professionals reviewing monitoring data" class="benefit-card__image"
             src="assets/images/benefits/remote-visibility.jpg" />
-          <h3 data-i18n="benefits.visibility.title">24/7 remote visibility</h3>
-          <p data-i18n="benefits.visibility.text">Monitor storage conditions, equipment state and thermal deviations
-            continuously from a centralized dashboard.</p>
+          <h3 data-i18n="benefits.visibility.title">Centralized monitoring visibility</h3>
+          <p data-i18n="benefits.visibility.text">Access sensor readings, equipment status and environmental conditions from a centralized dashboard, organized by facility.</p>
         </article>
         <article class="benefit-card reveal-up delay-2">
           <img alt="Specialist reviewing operational monitoring data" class="benefit-card__image"
             src="assets/images/benefits/early-incident-response.jpg" />
           <h3 data-i18n="benefits.response.title">Early incident response</h3>
-          <p data-i18n="benefits.response.text">Configurable alerts help teams react before a cold chain failure turns
-            into lost stock or regulatory exposure.</p>
+          <p data-i18n="benefits.response.text">Identify abnormal environmental conditions through configurable alerts and support timely investigation and incident management.</p>
         </article>
         <article class="benefit-card reveal-up">
           <img alt="Healthcare professional using digital documentation" class="benefit-card__image"
             src="assets/images/benefits/less-manual-documentation.jpg" />
           <h3 data-i18n="benefits.documentation.title">Less manual documentation</h3>
-          <p data-i18n="benefits.documentation.text">Reduce hours spent on paper logs and repetitive supervision so
-            specialists can focus on higher-value clinical work.</p>
+          <p data-i18n="benefits.documentation.text">Reduce repetitive manual recordkeeping by organizing sensor readings, equipment information and monitoring history in one digital platform.</p>
         </article>
         <article class="benefit-card reveal-up delay-1">
           <img alt="Professional reviewing traceability and audit reports" class="benefit-card__image"
             src="assets/images/benefits/audit-ready-traceability.jpg" />
-          <h3 data-i18n="benefits.traceability.title">Audit-ready traceability</h3>
-          <p data-i18n="benefits.traceability.text">Maintain historical, structured and exportable records that support
-            inspections, audits and quality controls.</p>
+          <h3 data-i18n="benefits.traceability.title">Traceable records for audits</h3>
+          <p data-i18n="benefits.traceability.text">Review historical monitoring data, export available reports and maintain structured records that support internal reviews and audit preparation.</p>
         </article>
         <article class="benefit-card reveal-up delay-2">
           <img alt="Pharmacy professionals using a scalable digital workflow" class="benefit-card__image"
             src="assets/images/benefits/scalable-saas-adoption.jpg" />
-          <h3 data-i18n="benefits.saas.title">Scalable SaaS adoption</h3>
-          <p data-i18n="benefits.saas.text">Deploy a modern web platform that fits resource-constrained institutions
-            without complex local infrastructure.</p>
+          <h3 data-i18n="benefits.saas.title">Role-based team collaboration</h3>
+          <p data-i18n="benefits.saas.text">Support daily operations with differentiated access for general managers and employees, based on assigned permissions and responsibilities.</p>
         </article>
       </div>
     </section>
@@ -203,8 +196,9 @@
         <div class="section-heading reveal-up center-heading">
           <span class="eyebrow" data-i18n="services.eyebrow">SERVICES</span>
           <h2 data-i18n="services.title">Solutions designed for clinical cold chain operations.</h2>
-          <p data-i18n="services.description">SafeLab supports laboratories, hospitals and pharmacy networks with
-            modular monitoring, alerting and reporting capabilities.</p>
+          <p data-i18n="services.description">
+          SafeLab helps clinical laboratories, hospitals and pharmacies monitor environmental conditions, supervise critical equipment, manage alerts and maintain traceable operational records.
+        </p>
         </div>
         <div class="services-grid">
           <article class="feature-card reveal-up">
@@ -213,10 +207,10 @@
             <span class="card-badge" data-i18n="services.laboratories.badge">SEGMENT 01</span>
             <h3 data-i18n="services.laboratories.title">Clinical laboratories</h3>
             <ul>
-              <li data-i18n="services.laboratories.item1">Continuous environmental monitoring</li>
-              <li data-i18n="services.laboratories.item2">Threshold-based alerts</li>
-              <li data-i18n="services.laboratories.item3">Digital traceability records</li>
-              <li data-i18n="services.laboratories.item4">Less manual temperature logging</li>
+              <li data-i18n="services.laboratories.item1">Temperature and humidity monitoring</li>
+              <li data-i18n="services.laboratories.item2">Configurable threshold alerts</li>
+              <li data-i18n="services.laboratories.item3">Sensor and equipment status</li>
+              <li data-i18n="services.laboratories.item4">Historical readings for quality control</li>
             </ul>
           </article>
           <article class="feature-card reveal-up delay-1">
@@ -225,10 +219,10 @@
             <span class="card-badge" data-i18n="services.hospitals.badge">SEGMENT 02</span>
             <h3 data-i18n="services.hospitals.title">Hospitals and clinical pharmacies</h3>
             <ul>
-              <li data-i18n="services.hospitals.item1">Multi-equipment centralized dashboard</li>
-              <li data-i18n="services.hospitals.item2">Multi-location visibility</li>
-              <li data-i18n="services.hospitals.item3">Audit-ready traceability support</li>
-              <li data-i18n="services.hospitals.item4">Faster response to failures</li>
+              <li data-i18n="services.hospitals.item1">Centralized visibility across facilities</li>
+              <li data-i18n="services.hospitals.item2">Critical storage equipment monitoring</li>
+              <li data-i18n="services.hospitals.item3">Alert and incident management</li>
+              <li data-i18n="services.hospitals.item4">Traceability reports for audits</li>
             </ul>
           </article>
           <article class="feature-card reveal-up delay-2">
@@ -237,10 +231,10 @@
             <span class="card-badge" data-i18n="services.platform.badge">CORE PLATFORM</span>
             <h3 data-i18n="services.platform.title">SafeLab monitoring platform</h3>
             <ul>
-              <li data-i18n="services.platform.item1">Integrated sensor-based data flow</li>
-              <li data-i18n="services.platform.item2">Audit-ready historical records</li>
-              <li data-i18n="services.platform.item3">Guided onboarding experience</li>
-              <li data-i18n="services.platform.item4">Scalable SaaS architecture</li>
+              <li data-i18n="services.platform.item1">Role-based access and permissions</li>
+              <li data-i18n="services.platform.item2">Centralized sensor and asset dashboards</li>
+              <li data-i18n="services.platform.item3">Alerts and incident tracking</li>
+              <li data-i18n="services.platform.item4">Historical records and reporting</li>
             </ul>
           </article>
         </div>
@@ -248,59 +242,46 @@
         <div class="plans-block" id="plans">
           <div class="section-heading reveal-up center-heading plans-heading">
             <span class="eyebrow" data-i18n="plans.eyebrow">PLANS</span>
-            <h2 data-i18n="plans.title">Flexible plans for each healthcare organization.</h2>
+            <h2 data-i18n="plans.title">One clear plan for your clinical operations.</h2>
+            <p data-i18n="plans.description">Get started with SafeLab Business and add employee seats as your organization grows.</p>
           </div>
-          <div class="plans-grid">
-            <article class="plan-card reveal-up plan-card--starter">
-              <img alt="Small clinical laboratory team for the Starter Lab plan" class="plan-card__image"
-                src="assets/images/plans/starter-lab.jpg" />
-              <span class="plan-tag" data-i18n="plans.starter.tag">Starter</span>
-              <h3>Starter Lab</h3>
-              <div class="plan-price"><span>$</span>29<span class="plan-cycle" data-i18n="plans.perMonth">/month</span>
+          <div class="plans-grid plans-grid--business">
+            <article class="plan-card plan-card--business reveal-up">
+              <div class="business-plan__visual">
+                <img alt="SafeLab clinical laboratory workspace" data-i18n-alt="plans.business.imageAlt"
+                  class="business-plan__image" src="assets/images/plans/professional.jpg" loading="lazy" />
+                <div class="business-plan__visual-caption">
+                  <span class="plan-tag" data-i18n="plans.business.tag">SAFELAB BUSINESS</span>
+                  <strong>SafeLab Business</strong>
+                  <p data-i18n="plans.business.description">Centralized monitoring and operational tools for clinical laboratories, hospitals and pharmacies.</p>
+                </div>
               </div>
-              <p data-i18n="plans.starter.description">For small laboratories that need reliable monitoring for critical
-                storage units.</p>
-              <ul>
-                <li data-i18n="plans.starter.item1">Up to 10 monitored devices</li>
-                <li data-i18n="services.laboratories.item2">Threshold-based alerts</li>
-                <li data-i18n="plans.starter.item3">Monthly compliance reports</li>
-                <li data-i18n="plans.starter.item4">Email support</li>
-              </ul>
-              <a class="secondary-btn" data-i18n="plans.starter.cta" href="#contact">Choose Starter</a>
-            </article>
-            <article class="plan-card reveal-up delay-1 plan-card--popular">
-              <img alt="Modern laboratory environment for the Professional plan" class="plan-card__image"
-                src="assets/images/plans/professional.jpg" />
-              <span class="plan-tag plan-tag--popular" data-i18n="plans.professional.tag">Most popular</span>
-              <h3>Professional</h3>
-              <div class="plan-price"><span>$</span>79<span class="plan-cycle" data-i18n="plans.perMonth">/month</span>
+              <div class="business-plan__content">
+                <div class="business-plan__price-group">
+                  <span class="business-plan__overline" data-i18n="plans.business.tag">SAFELAB BUSINESS</span>
+                  <div class="plan-price">S/ 118<span class="plan-cycle" data-i18n="plans.perMonth">/month</span></div>
+                  <p class="business-plan__tax" data-i18n="plans.business.taxNote">Prices in Peruvian soles (PEN), including IGV.</p>
+                </div>
+                <ul class="business-plan__seats">
+                  <li><span aria-hidden="true" class="business-plan__check">✓</span><span data-i18n="plans.business.manager">1 General Manager account included</span></li>
+                  <li><span aria-hidden="true" class="business-plan__check">✓</span><span data-i18n="plans.business.employees">10 employee seats included</span></li>
+                  <li><span aria-hidden="true" class="business-plan__check">+</span><span data-i18n="plans.business.additional">S/ 17 per additional employee / month</span></li>
+                </ul>
+                <div class="business-plan__features">
+                  <h4 data-i18n="plans.business.featuresLabel">Included platform capabilities</h4>
+                  <ul>
+                    <li data-i18n="plans.business.feature1">Temperature and humidity sensor monitoring</li>
+                    <li data-i18n="plans.business.feature2">Configurable alerts and incident follow-up</li>
+                    <li data-i18n="plans.business.feature3">Monitoring history and available reports</li>
+                    <li data-i18n="plans.business.feature4">Role-based access for your organization</li>
+                  </ul>
+                </div>
+                <div class="business-plan__actions">
+                  <a class="primary-btn" data-auth-link="signup" data-i18n="plans.business.cta"
+                    href="https://safelab-frontend.onrender.com/identityaccess/register">Create an account</a>
+                  <a class="secondary-btn" href="#contact" data-i18n="plans.business.secondaryCta">Ask about the plan</a>
+                </div>
               </div>
-              <p data-i18n="plans.professional.description">For hospitals and pharmacy areas that require broader
-                visibility and faster operational response.</p>
-              <ul>
-                <li data-i18n="services.hospitals.item2">Multi-location visibility</li>
-                <li data-i18n="plans.professional.item2">Real-time dashboard</li>
-                <li data-i18n="plans.professional.item3">Multi-user access</li>
-                <li data-i18n="plans.professional.item4">Priority support</li>
-              </ul>
-              <a class="primary-btn" data-i18n="plans.professional.cta" href="#contact">Choose Professional</a>
-            </article>
-            <article class="plan-card reveal-up delay-2 plan-card--scale">
-              <img alt="Large-scale laboratory operation for the Enterprise plan" class="plan-card__image"
-                src="assets/images/plans/enterprise.webp" />
-              <span class="plan-tag" data-i18n="plans.enterprise.tag">Scale</span>
-              <h3>Enterprise</h3>
-              <div class="plan-price"><span>$</span>Custom<span class="plan-cycle"
-                  data-i18n="plans.perMonth">/month</span></div>
-              <p data-i18n="plans.enterprise.description">For networks that need larger deployments, advanced analytics
-                and custom integrations.</p>
-              <ul>
-                <li data-i18n="plans.enterprise.item1">Unlimited monitored devices</li>
-                <li data-i18n="plans.enterprise.item2">Advanced analytics</li>
-                <li data-i18n="plans.enterprise.item3">Regulatory export workflows</li>
-                <li data-i18n="plans.enterprise.item4">API and custom integration support</li>
-              </ul>
-              <a class="secondary-btn" data-i18n="plans.enterprise.cta" href="#contact">Talk to Sales</a>
             </article>
           </div>
         </div>
@@ -749,8 +730,19 @@
   </main>
 
 
+  <button type="button" class="download-fab" data-download-open
+    aria-haspopup="dialog" aria-controls="android-download-dialog"
+    aria-label="Open the SafeLab Android download window" data-i18n-aria-label="download.floatingAria">
+    <svg aria-hidden="true" viewBox="0 0 24 24" width="21" height="21" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="5" y="2" width="14" height="20" rx="3" /><path d="M11 18h2" />
+    </svg>
+    <span class="download-fab__label" data-i18n="download.floating">Get Android App</span>
+    <span class="download-fab__arrow" aria-hidden="true">↓</span>
+  </button>
+
   <div class="download-backdrop" data-download-backdrop hidden>
-    <section class="download-dialog" data-download-dialog role="dialog" aria-modal="true"
+    <section class="download-dialog" data-download-dialog id="android-download-dialog" role="dialog" aria-modal="true"
       aria-labelledby="download-title" aria-describedby="download-description" tabindex="-1">
       <button class="download-dialog__close" data-download-close type="button" data-i18n-aria-label="download.close"
         aria-label="Close download window">×</button>

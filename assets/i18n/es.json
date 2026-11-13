@@ -36,7 +36,7 @@
     "stats": {
       "monitoring": "Monitoreo ambiental continuo",
       "modules": "Módulos operativos principales",
-      "assets": "Categorías de activos críticos protegidas"
+      "assets": "Tipos de materiales sensibles monitoreados"
     },
     "preview": "Vista previa del dashboard de SafeLab",
     "logoAlt": "Escudo de monitoreo de cadena de frío de SafeLab",
@@ -53,102 +53,90 @@
   },
   "benefits": {
     "title": "Valor visible para laboratorios y operaciones de salud.",
-    "description": "La plataforma se basa en la trazabilidad, la prevención de riesgos y la eficiencia operativa, y ayuda a los equipos de salud a reemplazar el control manual por monitoreo continuo y datos confiables.",
+    "description": "SafeLab reúne monitoreo ambiental, registros organizados y alertas operativas para ayudar a los equipos clínicos a supervisar mejor el almacenamiento sensible.",
     "safety": {
-      "title": "Protección de la seguridad clínica",
-      "text": "Protege materiales críticos detectando riesgos de temperatura antes de que comprometan la confiabilidad diagnóstica o la seguridad del paciente.",
+      "title": "Protección de materiales clínicos",
+      "text": "Detecta desviaciones de temperatura y humedad en equipos de almacenamiento crítico para ayudar a proteger muestras, reactivos y medicamentos.",
       "imageAlt": "Sistema de almacenamiento automatizado que protege materiales clínicos"
     },
     "visibility": {
-      "title": "Visibilidad remota 24/7",
-      "text": "Supervisa de forma continua las condiciones de almacenamiento, el estado de los equipos y las desviaciones térmicas desde un dashboard centralizado.",
+      "title": "Visibilidad centralizada del monitoreo",
+      "text": "Consulta lecturas de sensores, estado de equipos y condiciones ambientales desde un panel centralizado, organizado por sede.",
       "imageAlt": "Profesionales de salud revisando datos de monitoreo"
     },
     "response": {
-      "title": "Respuesta temprana a incidentes",
-      "text": "Las alertas configurables ayudan a los equipos a reaccionar antes de que una falla en la cadena de frío se convierta en pérdida de stock o en un riesgo regulatorio.",
+      "title": "Respuesta temprana ante incidentes",
+      "text": "Identifica condiciones ambientales anómalas mediante alertas configurables y facilita la investigación y gestión oportuna de incidentes.",
       "imageAlt": "Especialista revisando datos operativos de monitoreo"
     },
     "documentation": {
       "title": "Menos documentación manual",
-      "text": "Reduce las horas dedicadas a bitácoras en papel y a la supervisión repetitiva para que los especialistas se enfoquen en trabajo clínico de mayor valor.",
+      "text": "Reduce los registros manuales repetitivos al organizar lecturas de sensores, información de equipos e historial de monitoreo en una plataforma digital.",
       "imageAlt": "Profesional de salud usando documentación digital"
     },
     "traceability": {
-      "title": "Trazabilidad lista para auditorías",
-      "text": "Mantén registros históricos, estructurados y exportables que respaldan inspecciones, auditorías y controles de calidad.",
+      "title": "Registros trazables para auditorías",
+      "text": "Consulta el historial de monitoreo, exporta reportes disponibles y conserva registros estructurados que ayudan en revisiones internas y auditorías.",
       "imageAlt": "Profesional revisando reportes de trazabilidad y auditoría"
     },
     "saas": {
-      "title": "Adopción SaaS escalable",
-      "text": "Implementa una plataforma web moderna, adecuada para instituciones con recursos limitados y sin infraestructura local compleja.",
+      "title": "Colaboración según roles",
+      "text": "Apoya las operaciones diarias con acceso diferenciado para gerentes generales y empleados, según sus permisos y responsabilidades asignadas.",
       "imageAlt": "Profesionales de farmacia usando un flujo de trabajo digital escalable"
     }
   },
   "services": {
     "eyebrow": "SERVICIOS",
     "title": "Soluciones diseñadas para la cadena de frío clínica.",
-    "description": "SafeLab acompaña a laboratorios, hospitales y redes de farmacias con funciones modulares de monitoreo, alertas y reportes.",
+    "description": "SafeLab ayuda a laboratorios clínicos, hospitales y farmacias a monitorear condiciones ambientales, supervisar equipos críticos, gestionar alertas y conservar registros trazables.",
     "laboratories": {
       "badge": "SEGMENTO 01",
       "title": "Laboratorios clínicos",
       "imageAlt": "Profesional de laboratorio clínico trabajando con un microscopio",
-      "item1": "Monitoreo ambiental continuo",
-      "item2": "Alertas por umbrales",
-      "item3": "Registros digitales de trazabilidad",
-      "item4": "Menos registro manual de temperatura"
+      "item1": "Monitoreo de temperatura y humedad",
+      "item2": "Alertas por umbrales configurables",
+      "item3": "Estado de sensores y equipos",
+      "item4": "Lecturas históricas para control de calidad"
     },
     "hospitals": {
       "badge": "SEGMENTO 02",
       "title": "Hospitales y farmacias clínicas",
       "imageAlt": "Área de almacenamiento de una farmacia clínica y un hospital",
-      "item1": "Dashboard centralizado para varios equipos",
-      "item2": "Visibilidad de varias sedes",
-      "item3": "Trazabilidad lista para auditorías",
-      "item4": "Respuesta más rápida ante fallas"
+      "item1": "Visibilidad centralizada entre sedes",
+      "item2": "Supervisión de equipos de almacenamiento crítico",
+      "item3": "Gestión de alertas e incidentes",
+      "item4": "Reportes de trazabilidad para auditorías"
     },
     "platform": {
       "badge": "PLATAFORMA PRINCIPAL",
       "title": "Plataforma de monitoreo SafeLab",
       "imageAlt": "Dashboard de monitoreo de SafeLab en uso",
-      "item1": "Flujo de datos integrado desde sensores",
-      "item2": "Historial listo para auditorías",
-      "item3": "Incorporación guiada",
-      "item4": "Arquitectura SaaS escalable"
+      "item1": "Acceso y permisos según roles",
+      "item2": "Paneles centralizados de sensores y activos",
+      "item3": "Seguimiento de alertas e incidentes",
+      "item4": "Historial de registros y reportes"
     }
   },
   "plans": {
     "eyebrow": "PLANES",
-    "title": "Planes flexibles para cada organización de salud.",
+    "title": "Un plan claro para tus operaciones clínicas.",
     "perMonth": "/mes",
-    "custom": "A medida",
-    "starter": {
-      "tag": "Básico",
-      "imageAlt": "Equipo de un laboratorio clínico pequeño para el plan Starter Lab",
-      "description": "Para laboratorios pequeños que necesitan un monitoreo confiable de sus unidades de almacenamiento críticas.",
-      "item1": "Hasta 10 dispositivos monitoreados",
-      "item3": "Reportes mensuales de cumplimiento",
-      "item4": "Soporte por correo electrónico",
-      "cta": "Elegir Starter"
-    },
-    "professional": {
-      "tag": "Más popular",
-      "imageAlt": "Laboratorio moderno para el plan Professional",
-      "description": "Para hospitales y áreas de farmacia que requieren mayor visibilidad y una respuesta operativa más rápida.",
-      "item2": "Dashboard en tiempo real",
-      "item3": "Acceso multiusuario",
-      "item4": "Soporte prioritario",
-      "cta": "Elegir Professional"
-    },
-    "enterprise": {
-      "tag": "Escala",
-      "imageAlt": "Operación de laboratorio a gran escala para el plan Enterprise",
-      "description": "Para redes que necesitan despliegues más grandes, analítica avanzada e integraciones a medida.",
-      "item1": "Dispositivos monitoreados ilimitados",
-      "item2": "Analítica avanzada",
-      "item3": "Exportación de datos para fines regulatorios",
-      "item4": "Soporte de API e integraciones a medida",
-      "cta": "Hablar con ventas"
+    "description": "Comienza con SafeLab Business y agrega cupos de empleados conforme crezca tu organización.",
+    "business": {
+      "tag": "SAFELAB BUSINESS",
+      "imageAlt": "Área de trabajo de un laboratorio clínico SafeLab",
+      "description": "Monitoreo centralizado y herramientas operativas para laboratorios clínicos, hospitales y farmacias.",
+      "manager": "1 cuenta de gerente general incluida",
+      "employees": "10 cupos de empleados incluidos",
+      "additional": "S/ 17 por empleado adicional / mes",
+      "featuresLabel": "Funciones incluidas en la plataforma",
+      "feature1": "Monitoreo de sensores de temperatura y humedad",
+      "feature2": "Alertas configurables y seguimiento de incidentes",
+      "feature3": "Historial de monitoreo y reportes disponibles",
+      "feature4": "Acceso según roles dentro de tu organización",
+      "taxNote": "Precios en soles (PEN), IGV incluido.",
+      "cta": "Crear cuenta",
+      "secondaryCta": "Consultar sobre el plan"
     }
   },
   "product": {
@@ -357,6 +345,8 @@
     "feature2": "Acceso seguro a tu cuenta",
     "feature3": "Monitoreo en cualquier lugar",
     "download": "Descargar APK",
-    "web": "Abrir la aplicación web"
+    "web": "Abrir la aplicación web",
+    "floating": "Obtener app Android",
+    "floatingAria": "Abrir la ventana de descarga de SafeLab para Android"
   }
 }

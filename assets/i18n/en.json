@@ -36,7 +36,7 @@
     "stats": {
       "monitoring": "Continuous environmental monitoring",
       "modules": "Core operational modules",
-      "assets": "Critical asset categories protected"
+      "assets": "Types of sensitive materials monitored"
     },
     "preview": "SafeLab dashboard preview",
     "logoAlt": "SafeLab cold-chain monitoring shield",
@@ -53,102 +53,90 @@
   },
   "benefits": {
     "title": "Visible value for laboratories and healthcare operations.",
-    "description": "The platform is built around traceability, risk prevention and operational efficiency, helping healthcare teams replace manual control with continuous monitoring and reliable data.",
+    "description": "SafeLab brings together environmental monitoring, organized records and operational alerts to help clinical teams supervise sensitive storage more effectively.",
     "safety": {
       "title": "Clinical safety protection",
-      "text": "Protect critical materials by detecting temperature risks before they compromise diagnostic reliability or patient safety.",
+      "text": "Detect temperature and humidity deviations in critical storage equipment to help protect sensitive samples, reagents and medicines.",
       "imageAlt": "Automated storage system protecting clinical materials"
     },
     "visibility": {
-      "title": "24/7 remote visibility",
-      "text": "Monitor storage conditions, equipment state and thermal deviations continuously from a centralized dashboard.",
+      "title": "Centralized monitoring visibility",
+      "text": "Access sensor readings, equipment status and environmental conditions from a centralized dashboard, organized by facility.",
       "imageAlt": "Healthcare professionals reviewing monitoring data"
     },
     "response": {
       "title": "Early incident response",
-      "text": "Configurable alerts help teams react before a cold chain failure turns into lost stock or regulatory exposure.",
+      "text": "Identify abnormal environmental conditions through configurable alerts and support timely investigation and incident management.",
       "imageAlt": "Specialist reviewing operational monitoring data"
     },
     "documentation": {
       "title": "Less manual documentation",
-      "text": "Reduce hours spent on paper logs and repetitive supervision so specialists can focus on higher-value clinical work.",
+      "text": "Reduce repetitive manual recordkeeping by organizing sensor readings, equipment information and monitoring history in one digital platform.",
       "imageAlt": "Healthcare professional using digital documentation"
     },
     "traceability": {
-      "title": "Audit-ready traceability",
-      "text": "Maintain historical, structured and exportable records that support inspections, audits and quality controls.",
+      "title": "Traceable records for audits",
+      "text": "Review historical monitoring data, export available reports and maintain structured records that support internal reviews and audit preparation.",
       "imageAlt": "Professional reviewing traceability and audit reports"
     },
     "saas": {
-      "title": "Scalable SaaS adoption",
-      "text": "Deploy a modern web platform that fits resource-constrained institutions without complex local infrastructure.",
+      "title": "Role-based team collaboration",
+      "text": "Support daily operations with differentiated access for general managers and employees, based on assigned permissions and responsibilities.",
       "imageAlt": "Pharmacy professionals using a scalable digital workflow"
     }
   },
   "services": {
     "eyebrow": "SERVICES",
     "title": "Solutions designed for clinical cold chain operations.",
-    "description": "SafeLab supports laboratories, hospitals and pharmacy networks with modular monitoring, alerting and reporting capabilities.",
+    "description": "SafeLab helps clinical laboratories, hospitals and pharmacies monitor environmental conditions, supervise critical equipment, manage alerts and maintain traceable operational records.",
     "laboratories": {
       "badge": "SEGMENT 01",
       "title": "Clinical laboratories",
       "imageAlt": "Clinical laboratory professional working with a microscope",
-      "item1": "Continuous environmental monitoring",
-      "item2": "Threshold-based alerts",
-      "item3": "Digital traceability records",
-      "item4": "Less manual temperature logging"
+      "item1": "Temperature and humidity monitoring",
+      "item2": "Configurable threshold alerts",
+      "item3": "Sensor and equipment status",
+      "item4": "Historical readings for quality control"
     },
     "hospitals": {
       "badge": "SEGMENT 02",
       "title": "Hospitals and clinical pharmacies",
       "imageAlt": "Clinical pharmacy and hospital storage area",
-      "item1": "Multi-equipment centralized dashboard",
-      "item2": "Multi-location visibility",
-      "item3": "Audit-ready traceability support",
-      "item4": "Faster response to failures"
+      "item1": "Centralized visibility across facilities",
+      "item2": "Critical storage equipment monitoring",
+      "item3": "Alert and incident management",
+      "item4": "Traceability reports for audits"
     },
     "platform": {
       "badge": "CORE PLATFORM",
       "title": "SafeLab monitoring platform",
       "imageAlt": "SafeLab monitoring dashboard in use",
-      "item1": "Integrated sensor-based data flow",
-      "item2": "Audit-ready historical records",
-      "item3": "Guided onboarding experience",
-      "item4": "Scalable SaaS architecture"
+      "item1": "Role-based access and permissions",
+      "item2": "Centralized sensor and asset dashboards",
+      "item3": "Alerts and incident tracking",
+      "item4": "Historical records and reporting"
     }
   },
   "plans": {
     "eyebrow": "PLANS",
-    "title": "Flexible plans for each healthcare organization.",
+    "title": "One clear plan for your clinical operations.",
     "perMonth": "/month",
-    "custom": "Custom",
-    "starter": {
-      "tag": "Starter",
-      "imageAlt": "Small clinical laboratory team for the Starter Lab plan",
-      "description": "For small laboratories that need reliable monitoring for critical storage units.",
-      "item1": "Up to 10 monitored devices",
-      "item3": "Monthly compliance reports",
-      "item4": "Email support",
-      "cta": "Choose Starter"
-    },
-    "professional": {
-      "tag": "Most popular",
-      "imageAlt": "Modern laboratory environment for the Professional plan",
-      "description": "For hospitals and pharmacy areas that require broader visibility and faster operational response.",
-      "item2": "Real-time dashboard",
-      "item3": "Multi-user access",
-      "item4": "Priority support",
-      "cta": "Choose Professional"
-    },
-    "enterprise": {
-      "tag": "Scale",
-      "imageAlt": "Large-scale laboratory operation for the Enterprise plan",
-      "description": "For networks that need larger deployments, advanced analytics and custom integrations.",
-      "item1": "Unlimited monitored devices",
-      "item2": "Advanced analytics",
-      "item3": "Regulatory export workflows",
-      "item4": "API and custom integration support",
-      "cta": "Talk to Sales"
+    "description": "Get started with SafeLab Business and add employee seats as your organization grows.",
+    "business": {
+      "tag": "SAFELAB BUSINESS",
+      "imageAlt": "SafeLab clinical laboratory workspace",
+      "description": "Centralized monitoring and operational tools for clinical laboratories, hospitals and pharmacies.",
+      "manager": "1 General Manager account included",
+      "employees": "10 employee seats included",
+      "additional": "S/ 17 per additional employee / month",
+      "featuresLabel": "Included platform capabilities",
+      "feature1": "Temperature and humidity sensor monitoring",
+      "feature2": "Configurable alerts and incident follow-up",
+      "feature3": "Monitoring history and available reports",
+      "feature4": "Role-based access for your organization",
+      "taxNote": "Prices in Peruvian soles (PEN), including IGV.",
+      "cta": "Create an account",
+      "secondaryCta": "Ask about the plan"
     }
   },
   "product": {
@@ -357,6 +345,8 @@
     "feature2": "Secure account access",
     "feature3": "Monitoring on the go",
     "download": "Download APK",
-    "web": "Open the web application"
+    "web": "Open the web application",
+    "floating": "Get Android App",
+    "floatingAria": "Open the SafeLab Android download window"
   }
 }
