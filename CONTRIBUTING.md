@@ -1,196 +1,207 @@
-# Contributing Guidelines - SafeLab Business Website
+# Contributing to SafeLab Business Website
 
-Welcome to the **SafeLab Business Website** repository.
+Thank you for contributing to **SafeLab**, developed by **MediTrack Startup**. This guide documents how to collaborate on the public-facing landing page while preserving its original visual identity, accessibility, translations, and integration with the SafeLab ecosystem.
 
-This document defines the collaboration standards, Git workflow, coding practices, and contribution rules for all contributors working on the SafeLab Landing Page project.
+For product information and local setup, see the [README](README.md).
 
----
+## Scope and Technology
 
-## Project Scope
+This repository contains a **static business website** using:
 
-This repository contains the official landing page / business website for **SafeLab**, a monitoring system for artifacts and supplies used in laboratories developed by **MediTrack Startup**.
+- **HTML5** for semantic page structure.
+- **CSS3** for branding, layouts, responsive design, and media transitions.
+- **Vanilla JavaScript** for navigation and interactive features.
+- **JSON** for English (`en`) and Spanish (`es`) interface copy.
+- **Git and GitHub** for source control, collaboration, and deployment.
 
-Main goals:
-
-- Professional brand presence
-- Product presentation
-- Lead generation
-- Responsive UI/UX
-- Multilingual support (EN / ES)
-- Maintainable frontend architecture
-
----
-
-## Recommended Stack
-
-- HTML5
-- CSS
-- Vanilla JavaScript
-- Responsive Design
-- Git + GitHub Flow
-
----
+The mobile application and its APK builds belong to the separate [`safelab-mobile-app`](https://github.com/meditrack-mobile-app-1acc0238-2620-4949/safelab-mobile-app) repository, not to this website's source tree.
 
 ## Branching Model
 
-We use a simplified GitFlow strategy:
+We follow a **GitFlow-inspired workflow**.
 
-- `main` → Stable production version
-- `develop` → Integration branch
-- `feature/*` → New features
-- `fix/*` → Bug fixes
-- `docs/*` → Documentation improvements
-- `refactor/*` → Code structure improvements
+| Branch | Responsibility |
+| --- | --- |
+| `main` | Stable production source for the business website. |
+| `develop` | Integration and validation of completed features. |
+| `feature/*` | New product or website functionality, created from `develop`. |
+| `fix/*` | Corrections to website behavior or presentation. |
+| `docs/*` | Documentation-only changes. |
+| `refactor/*` | Internal improvements without intentional behavior changes. |
+| `release/*` | Optional release stabilization before production. |
+| `hotfix/*` | Urgent production corrections, typically based on `main`. |
+| `archive/*` | Historical branches retained for traceability; do not develop new features here. |
 
-### Examples
+### Current AV2 Work
 
-```bash
-feature/topbar-redesign
-feature/testimonials-slider
-fix/mobile-navbar
-docs/update-readme
-refactor/css-structure
-```
-
----
-
-## Mandatory Workflow
-
-### 1. Sync repository
-
-```bash
-git checkout develop
-git pull origin develop
-```
-
-### 2. Create branch
-
-```bash
-git checkout -b feature/your-task-name
-git push -u origin feature/your-task-name
-```
-
-### 3. Work locally
-
-Make your changes with clean commits.
-
-### 4. Commit
-
-```bash
-git commit -m "feat: improve hero section spacing"
-```
-
-### 5. Push
-
-```bash
-git push origin feature/your-task-name
-```
-
----
-
-## Commit Convention
-
-Use Conventional Commits:
-
-- `feat:` new feature
-- `fix:` bug fix
-- `docs:` documentation
-- `style:` visual adjustments
-- `refactor:` internal improvement
-- `chore:` maintenance
-
-### Examples
-
-```bash
-feat: add language selector
-fix: correct navbar spacing
-style: improve button shadows
-docs: update setup guide
-refactor: split hero styles into modules
-```
-
----
-
-## Project Structure
+The designated working branch for the current landing integration is:
 
 ```text
-safelab-business-website/
-├── index.html
-├── assets/
-│   ├── i18n/
-│   ├── images/
-│   ├── videos/
-│   ├── js/
-│   └── styles/
-├── README.md
-├── CONTRIBUTING.md
-└── LICENSE
+feature/av2-landing-release-integration
 ```
 
----
+It is based on `develop` and covers the integrated videos, Render authentication links, and the Android APK download flow. This naming convention is independent from the existing `feature/av2-about-team-video` branch, which should not be renamed as part of the TB1 branch archival effort.
 
-## Frontend Rules
+Historical TB1 branches may be renamed from `feature/tb1-*` to `archive/tb1-*` when their work is complete. Renaming preserves their commit history; verify open Pull Requests and collaborator checkouts before renaming.
+
+## Standard Contribution Workflow
+
+### 1. Synchronize `develop`
+
+```bash
+git fetch origin
+git switch develop
+git pull --ff-only origin develop
+```
+
+### 2. Create a focused branch
+
+```bash
+git switch -c feature/av2-landing-release-integration
+```
+
+If that branch already exists locally or remotely, switch to it and synchronize it instead of creating a duplicate.
+
+### 3. Make changes and validate locally
+
+Run a static server from the repository root:
+
+```bash
+python -m http.server 5500
+```
+
+Visit `http://localhost:5500/` and verify the affected features on both desktop and mobile layouts.
+
+### 4. Commit with a clear message
+
+```bash
+git add index.html assets/ README.md CONTRIBUTING.md
+git commit -m "feat(landing): integrate videos, Render authentication and Android APK downloads"
+```
+
+Stage only files actually changed for your task; the command above is an example of the AV2 integration scope.
+
+### 5. Push and open a Pull Request
+
+```bash
+git push -u origin feature/av2-landing-release-integration
+```
+
+Create a Pull Request with **`develop` as the base** and request review. After merge, validate `develop`, then promote the reviewed changes to `main` through a separate Pull Request. Never use the feature branch as the production Pages source unless the team deliberately changes its deployment strategy.
+
+## Conventional Commits
+
+Use the format:
+
+```text
+<type>(<scope>): <imperative summary>
+```
+
+Recommended types include `feat`, `fix`, `docs`, `style`, `refactor`, `test`, and `chore`.
+
+Examples:
+
+```bash
+feat(media): embed SafeLab team presentation
+feat(download): link Android APK to latest GitHub Release
+fix(i18n): correct Spanish download dialog text
+style(landing): soften video edges without changing branding
+docs: update deployment and contribution instructions
+refactor(media): simplify video player initialization
+```
+
+Keep commits focused. Do not combine unrelated content, styling, and deployment changes without justification.
+
+## Source Code Conventions
 
 ### HTML
 
-- Use semantic tags
-- Keep indentation consistent
-- Accessible labels when needed
+- Prefer semantic elements (`header`, `nav`, `main`, `section`, `footer`).
+- Preserve the existing section IDs used by navigation links.
+- Use descriptive `alt` attributes and accessible names for icon-only buttons.
+- Use `aria-*` attributes where they improve dialog, menu, and control accessibility.
+- Avoid inline event handlers and unnecessary structural changes.
 
 ### CSS
 
-- One file per section/component
-- Use variables for colors
-- Keep responsive structure clean
+- Keep the current SafeLab color palette, typography, spacing system, and recognizable design.
+- Edit [`assets/styles/styles.css`](assets/styles/styles.css) rather than adding one-off styles to page markup.
+- Respect mobile breakpoints, focus states, reduced-motion preferences, and text contrast.
+- Blend media with the existing page using gradients, responsive containers, and controlled transitions; do not obscure playback controls.
 
 ### JavaScript
 
-- Modular scripts
-- No inline JS
-- Clear naming conventions
+- Keep user-facing URLs and external integration identifiers in [`assets/js/site-config.js`](assets/js/site-config.js).
+- Use [`assets/js/media.js`](assets/js/media.js) for the existing media, APK download dialog, and authentication-link integrations.
+- Preserve keyboard support, escape-to-close behavior, and focus management in dialogs.
+- Validate URLs and user-controlled input before injecting it into elements or attributes.
+- Do not commit API keys, tokens, signing material, passwords, or environment secrets.
 
----
+### Internationalization (i18n)
 
-## UI / UX Rules
+- Add or edit equivalent keys in **both** `assets/i18n/en.json` and `assets/i18n/es.json`.
+- Use English as the default interface language and clear Latin American Spanish translations.
+- Avoid hard-coded visible interface strings in JavaScript unless they are explicit safe fallbacks.
+- Test labels, dialogs, media controls, and navigation in both languages.
 
-- Keep SafeLab branding consistent
-- Use logo palette colors
-- Smooth transitions allowed
-- Responsive first mindset
-- Avoid cluttered layouts
+### Assets and External Video
 
----
+- Keep existing imagery inside `assets/images/` and optimize additions appropriately.
+- Reference YouTube media by its official video identifier rather than storing large copies in this repository.
+- Preserve click-to-play behavior and meaningful labels for the validation-interview and team videos.
+- Do not present validation interviews as an official promotional About the Product video. A separate promotional ID can be added as `productVideoId` when available.
+- Confirm permission to publish images, team profiles, testimonials, and other third-party media.
 
-## Assets Rules
+## Integration Rules
 
-- Images inside `assets/images`
-- Videos inside `assets/videos`
-- Prefer optimized formats (`webp`, `svg`, `png`)
-- Use lowercase names
+### Web Application (Render)
 
-Example:
+The current public configuration uses:
 
 ```text
-hero-dashboard.webp
-safelab-logo.svg
-team-member-1.png
+https://safelab-frontend.onrender.com/
 ```
 
----
+Both `loginUrl` and `signupUrl` currently resolve to this entry point. Do not invent separate production paths for login or registration; verify the deployed routes before changing either destination.
 
-## Important Rules
+### Android APK (GitHub Releases)
 
-- Never commit directly to `main`
-- Always pull before working
-- Keep commits atomic
-- Communicate large changes
-- Respect code consistency
+The APK is served from the mobile project's **latest stable GitHub Release**:
 
----
+```text
+https://github.com/meditrack-mobile-app-1acc0238-2620-4949/safelab-mobile-app/releases/latest/download/SafeLab.apk
+```
 
-## Collaboration Culture
+Before changing the download flow, confirm that:
 
-- Be respectful
-- Give constructive feedback
-- Help teammates
-- Prioritize quality over speed
+1. The repository and release are publicly accessible.
+2. The release is published and not marked as a prerelease.
+3. The attached asset is named **exactly** `SafeLab.apk`, including capitalization.
+4. The APK is an installable, appropriately signed build that points to production services.
+5. The URL works from the published landing page and an Android device.
+
+Do **not** upload an APK directly to the website's `assets/` folder or commit an APK to this repository for distribution. Publishing a new version in the mobile repository should not require modifying GitHub Pages if the asset name remains the same.
+
+## Pull Request Expectations
+
+A Pull Request should state:
+
+1. **What changed** and why it matters.
+2. **Which sections or files** were updated.
+3. **How it was validated**, including browser and mobile checks.
+4. **Any remaining dependencies**, such as an unpublished promotional video or release asset.
+5. **Visual evidence**, when UI changes are involved.
+
+Ask for a teammate's review before merging. Resolve feedback on the feature branch and keep `main` production-ready.
+
+## Collaboration Principles
+
+- Communicate respectfully and provide constructive, specific reviews.
+- Preserve existing behavior unless a change is explicitly required.
+- Prefer small, readable updates over wholesale rewrites of the original landing.
+- Keep feature history traceable through branches, Pull Requests, and Conventional Commits.
+- Treat accessibility, localization, security, and consistency as release requirements.
+
+## License
+
+This repository includes an [MIT License](LICENSE). Check any third-party asset licensing separately before publishing it.
