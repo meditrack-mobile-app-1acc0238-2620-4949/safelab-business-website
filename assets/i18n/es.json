@@ -324,5 +324,39 @@
     "message": "Escribe al menos 10 caracteres.",
     "success": "¡Gracias! Tu mensaje fue enviado. Nuestro equipo se pondrá en contacto pronto.",
     "review": "Revisa los campos resaltados."
+  },
+  "video": {
+    "watchYoutube": "Ver en YouTube ↗",
+    "product": {
+      "eyebrow": "SAFELAB EN ACCIÓN",
+      "title": "Conoce SafeLab a través de experiencias reales.",
+      "description": "Descubre cómo profesionales de laboratorios y farmacias utilizan la plataforma en nuestras entrevistas de validación.",
+      "labelValidation": "Entrevistas de validación · 19:36",
+      "labelProduct": "Sobre el producto",
+      "poster": "La plataforma en acción",
+      "play": "Reproducir el video de SafeLab",
+      "playValidation": "Reproducir las entrevistas de validación de SafeLab"
+    },
+    "team": {
+      "eyebrow": "CONOCE AL EQUIPO",
+      "title": "Las personas y el proceso detrás de SafeLab.",
+      "description": "Conoce al equipo, nuestra colaboración y las ideas que dieron forma a SafeLab.",
+      "label": "Acerca del equipo · 4:57",
+      "poster": "Creamos juntos",
+      "play": "Reproducir el video del equipo SafeLab"
+    }
+  },
+  "download": {
+    "trigger": "Obtener app Android",
+    "subtitle": "SafeLab desde tu celular.",
+    "close": "Cerrar ventana de descarga",
+    "eyebrow": "EXPERIENCIA MÓVIL",
+    "title": "SafeLab para Android",
+    "description": "Supervisa condiciones, revisa alertas de equipos y accede a información importante desde tu celular.",
+    "feature1": "Aplicación para Android",
+    "feature2": "Acceso seguro a tu cuenta",
+    "feature3": "Monitoreo en cualquier lugar",
+    "download": "Descargar APK",
+    "web": "Abrir la aplicación web"
   }
 }

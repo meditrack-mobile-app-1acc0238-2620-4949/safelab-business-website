@@ -247,11 +247,11 @@ function applyTheme(theme) {
     button.textContent = dark ? '☾' : '☼';
     button.setAttribute('aria-pressed', String(dark));
   });
-  try { localStorage.setItem(THEME_KEY, dark ? 'dark' : 'light'); } catch (_) {}
+  try { localStorage.setItem(THEME_KEY, dark ? 'dark' : 'light'); } catch (_) { }
 }
 let initialTheme = 'light';
 try {
   initialTheme = localStorage.getItem(THEME_KEY) || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-} catch (_) {}
+} catch (_) { }
 applyTheme(initialTheme);
 themeButtons.forEach((button) => button.addEventListener('click', () => applyTheme(document.body.classList.contains('dark') ? 'light' : 'dark')));
