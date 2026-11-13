@@ -324,5 +324,39 @@
     "message": "Please write at least 10 characters.",
     "success": "Thank you! Your message was sent. Our team will contact you soon.",
     "review": "Please review the highlighted fields."
+  },
+  "video": {
+    "watchYoutube": "Watch on YouTube ↗",
+    "product": {
+      "eyebrow": "SAFELAB IN PRACTICE",
+      "title": "Explore SafeLab through real user feedback.",
+      "description": "Discover how laboratory and pharmacy professionals experience the platform in our validation interviews.",
+      "labelValidation": "Validation interviews · 19:36",
+      "labelProduct": "About the Product",
+      "poster": "The platform in action",
+      "play": "Play SafeLab product video",
+      "playValidation": "Play SafeLab validation interviews"
+    },
+    "team": {
+      "eyebrow": "MEET THE PEOPLE",
+      "title": "The people and process behind SafeLab.",
+      "description": "Get to know the team, our collaboration and the ideas that shaped SafeLab.",
+      "label": "About the Team · 4:57",
+      "poster": "Built together",
+      "play": "Play the SafeLab team video"
+    }
+  },
+  "download": {
+    "trigger": "Get the Android App",
+    "subtitle": "SafeLab in your pocket.",
+    "close": "Close download window",
+    "eyebrow": "MOBILE EXPERIENCE",
+    "title": "SafeLab for Android",
+    "description": "Track conditions, review equipment alerts and access critical information from your phone.",
+    "feature1": "Android application",
+    "feature2": "Secure account access",
+    "feature3": "Monitoring on the go",
+    "download": "Download APK",
+    "web": "Open the web application"
   }
 }
